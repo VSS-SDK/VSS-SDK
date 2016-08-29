@@ -1,0 +1,15 @@
+[submodule "VSS-Simulator"]
+	path = VSS-Simulator
+	url = https://github.com/SIRLab/VSS-Simulator.git
+[submodule "VSS-Vision"]
+	path = VSS-Vision
+	url = https://github.com/SIRLab/VSS-Vision.git
+[submodule "VSS-SampleStrategy"]
+	path = VSS-SampleStrategy
+	url = https://github.com/SIRLab/VSS-SampleStrategy.git
+[submodule "VSS-Joystick"]
+	path = VSS-Joystick
+	url = https://github.com/SIRLab/VSS-Joystick.git
+[submodule "VSS-Viewer"]
+	path = VSS-Viewer
+	url = https://github.com/SIRLab/VSS-Viewer.git
