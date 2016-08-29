@@ -23,6 +23,9 @@
 *.a
 *.lib
 
+# Visual Code Junk
+*.vscode
+
 # Executables
 *.exe
 *.out
