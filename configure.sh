@@ -59,13 +59,13 @@ INSTALL_UBUNTU_16_04 () {
     echo " ${BLUE}  protobuf-compiler libprotobuf-dev ${WHITE}(Mechanism for serializing structured data)";
     echo " ${BLUE}  qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev ${WHITE}(Framework for applications and user interfaces)";
     echo " ${BLUE}  libsqlite3-dev ${WHITE}(Embeddable, zero-configuration SQL database engine)"
-    echo " ${BLUE}  doxygen graphviz graphviz graphviz-dev ${WHITE}(Generator of documentation and graphs)"
+    echo " ${BLUE}  doxygen graphviz graphviz-dev ${WHITE}(Generator of documentation and graphs)"
     echo " ${BLUE}  libboost-all-dev ${WHITE}(Peer-reviewed portable C++ source libraries)"
     echo " ${BLUE}  freeglut3 freeglut3-dev ${WHITE}(OpenGL Utility Toolkit (GLUT) library)"
     echo " ${BLUE}  libbullet-dev ${WHITE}(Physics Library)"
     echo " ";
     sleep 5;
-    sudo apt-get install g++ cmake git uvcdynctrl libzmqpp3 libzmqpp-dev protobuf-compiler libprotobuf-dev qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev doxygen graphviz graphviz graphviz-dev libboost-all-dev freeglut3 freeglut3-dev libbullet-dev
+    sudo apt-get install g++ cmake git uvcdynctrl libzmqpp3 libzmqpp-dev protobuf-compiler libprotobuf-dev qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev doxygen graphviz graphviz-dev libboost-all-dev freeglut3 freeglut3-dev libbullet-dev
 
     echo " ";
     echo "${BLUE}${BOLD}Install from Github: OpenCV${WHITE}${NORMAL} (Library of real-time computer vision)";
