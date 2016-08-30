@@ -26,43 +26,40 @@ MAIN_MESSAGE () {
 MAN () {
     echo "${WHITE}${BOLD} - MANUAL - ";
     echo " ";
-    echo "${YELLOW}${BOLD}------------------------------------------------------"
-    echo "- Comandos simples para abrir um projeto de cada vez -";
-    echo "------------------------------------------------------"
+    echo "${YELLOW}-------------------------------------"
+    echo "- Comandos que podem ser utilizados -";
+    echo "-------------------------------------"
+
     echo "${BLUE}Abrir o Manual:";
     echo " ${WHITE} ./run.sh";
     echo " ";
-    
+
     echo "${BLUE}Abrir o VSS-Vision:";
     echo " ${WHITE} ./run.sh ${GREEN} vision";
     echo " ";
-    
-    echo "${BLUE}Abrir o VSS-Simulator (sem ambiente 3D):"
-    echo " ${WHITE} ./run.sh ${GREEN} sim";
-    echo " ";
 
-    echo "${BLUE}Abrir o VSS-Viewer:"
-    echo " ${WHITE} ./run.sh ${GREEN} viewer";
-    echo " ";
-
-    echo "${BLUE}Abrir o VSS-Joystick com robos reais:"
+    echo "${BLUE}Abrir o VSS-Joystick controlando robos reais:";
     echo " ${WHITE} ./run.sh ${GREEN} joy";
     echo " ";
-    
-    echo "${BLUE}Abrir o VSS-SampleStrategy com robos reais:"
-    echo " ${WHITE} ./run.sh ${GREEN} sample1";
-    echo " ";
-
-    echo "${YELLOW}------------------------------------------------------------"
-    echo "- Comandos compostos para abrir varios projetos de uma vez -";
-    echo "------------------------------------------------------------"
 
     echo "${BLUE}Abrir o VSS-Vision com uma Estrategia (Rotina de Jogo):";
     echo " ${WHITE} ./run.sh ${GREEN} vision  sample1";
     echo " ";
 
+    echo "${BLUE}Abrir o VSS-Vision com o VSS-Joystick controlado robos reais:";
+    echo " ${WHITE} ./run.sh ${GREEN} vision  joy";
+    echo " ";
+
     echo "${BLUE}Abrir o VSS-Vision (com Ambiente 3D):";
     echo " ${WHITE} ./run.sh ${GREEN} vision  viewer";
+    echo " ";
+
+    echo "${BLUE}Abrir o VSS-Vision (com Ambiente 3D) com uma Estratégia (Rotina de Jogo):";
+    echo " ${WHITE} ./run.sh ${GREEN} vision  viewer  sample1";
+    echo " ";
+
+    echo "${BLUE}Abrir o VSS-Vision (com Ambiente 3D) com o VSS-Joystick controlando robos reais:";
+    echo " ${WHITE} ./run.sh ${GREEN} vision  viewer  joy";
     echo " ";
 
     echo "${BLUE}Abrir o VSS-Simulator (com Ambiente 3D):";
@@ -119,11 +116,11 @@ CLEAN_PROCESS () {
 }
 
 MAIN_MESSAGE;
-CLEAN_PROCESS;
 
 if [ $# -eq 0 ]; then
     MAN;
 else
+    CLEAN_PROCESS;
     echo "${WHITE}${BOLD} - EXECUCAO - ";
 
     # Check all inputs

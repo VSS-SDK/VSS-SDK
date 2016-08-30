@@ -34,7 +34,7 @@ $ ./configure.sh
 
 Rodando
 -------
-Ver [MANUAL.md][manual]
+Ver [Manual][manual] de como utilizar ./run.sh
 ```
 $ cd VSS-SDK
 $ ./run.sh
