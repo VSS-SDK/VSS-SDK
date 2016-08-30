@@ -23,7 +23,9 @@ $ sudo chmod 770 configure.sh
 $ ./configure.sh
 ```
 > Implementada e testada para Ubuntu 16.04
+
 > Implementada para Ubuntu 14.04
+
 > TODO: Implementar para Debian, Fedora e Raspbian
 
 
