@@ -137,28 +137,28 @@ else
         # Open VSS-Vision
         if [ $STATUS_VISION == 1 ]; then
             cd VSS-Vision
-            make run &&
+            make run &
             cd ..
         fi
 
         # Open VSS-Simulator
         if [ $STATUS_SIMULATOR == 1 ]; then
             cd VSS-Simulator
-            make run &&
+            make run &
             cd ..
         fi
 
         # Open VSS-Viewer
         if [ $STATUS_Viewer == 1 ]; then
             cd VSS-Viewer
-            make run &&
+            make run &
             cd ..
         fi
 
         # Open VSS-Joystick
         if [ $STATUS_JOYSTICK == 1 ]; then
             cd VSS-Joystick
-            make run &&
+            make run &
             cd ..
         fi
 
