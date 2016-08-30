@@ -67,6 +67,6 @@ $ ./run.sh sim viewer joy
 
 ### Abrir o VSS-Simulator (com Ambiente 3D) com VSS-Joystick controlando robôs de um time para jogar contra uma estratégia
 ```
-$ ./run.sh sim viewer
+$ ./run.sh sim viewer yellow=joy blue=sample1
 ```
 
