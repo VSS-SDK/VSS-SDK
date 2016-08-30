@@ -70,6 +70,10 @@ MAN () {
     echo " ${WHITE} ./run.sh ${GREEN} sim  yellow=sample1  blue=sample2";
     echo " ";
 
+    echo "${BLUE}Abrir o VSS-Simulator (com Ambiente 3D) com Uma Estratégia em Teste:";
+    echo " ${WHITE} ./run.sh ${GREEN} sim  viewer  sample1";
+    echo " ";
+
     echo "${BLUE}Abrir o VSS-Simulator (com Ambiente 3D) com Duas Estrategias se Enfrentando:";
     echo " ${WHITE} ./run.sh ${GREEN} sim  viewer  yellow=sample1  blue=sample2";
     echo " ";
