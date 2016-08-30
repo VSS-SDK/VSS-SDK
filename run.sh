@@ -149,7 +149,7 @@ else
         fi
 
         # Open VSS-Viewer
-        if [ $STATUS_Viewer == 1 ]; then
+        if [ $STATUS_VIEWER == 1 ]; then
             cd VSS-Viewer
             make run &
             cd ..
