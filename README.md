@@ -34,9 +34,10 @@ $ ./configure.sh
 
 Rodando
 -------
+Ver [MANUAL.md][manual]
 ```
 $ cd VSS-SDK
-$ ./run.sh sim viewer joystick
+$ ./run.sh
 ```
 
 
@@ -68,3 +69,4 @@ Dependências
 [viewer]: https://github.com/SIRLab/VSS-Viewer
 [sample]: https://github.com/SIRLab/VSS-SampleStrategy
 [joystick]: https://github.com/SIRLab/VSS-Joystick
+[manual]: https://github.com/SIRLab/VSS-SDK/blob/master/MANUAL.md
