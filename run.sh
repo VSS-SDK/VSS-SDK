@@ -110,13 +110,22 @@ CHECK_SIMULATOR () {
     fi
 }
 
+CLEAN_PROCESS () {
+    sudo killall VSS-Simulation
+    sudo killall VSS-Vision
+    sudo killall VSS-Viewer
+    sudo killall VSS-Joystick
+    sudo killall VSS-SampleStrategy
+}
+
 MAIN_MESSAGE;
+CLEAN_PROCESS;
 
 if [ $# -eq 0 ]; then
     MAN;
 else
     echo "${WHITE}${BOLD} - EXECUCAO - ";
-    echo " ";
+
     # Check all inputs
     for i in $*; do 
         CHECK_VISION $i
@@ -128,6 +137,7 @@ else
     # Check invalid combinations
     if [ $STATUS_VISION == 1 ]; then
         if [ $STATUS_SIMULATOR == 1 ]; then
+            echo " ";
             echo "${RED}${BOLD}[ERRO DE COMBINACAO]: ${WHITE}VSS-Vision e VSS-Simulator nao podem ser abertos ao mesmo tempo."
             EXECUTION_OK=0
         fi
@@ -136,6 +146,8 @@ else
     if [ $EXECUTION_OK == 1 ]; then
         # Open VSS-Vision
         if [ $STATUS_VISION == 1 ]; then
+            echo " ";
+            echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}VSS-Vision${NORMAL}"
             cd VSS-Vision
             make run &
             cd ..
@@ -143,6 +155,8 @@ else
 
         # Open VSS-Simulator
         if [ $STATUS_SIMULATOR == 1 ]; then
+            echo " ";
+            echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}VSS-Simulator${NORMAL}"
             cd VSS-Simulator
             make run &
             cd ..
@@ -150,6 +164,8 @@ else
 
         # Open VSS-Viewer
         if [ $STATUS_VIEWER == 1 ]; then
+            echo " ";
+            echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}VSS-Viewer${NORMAL}"
             cd VSS-Viewer
             make run &
             cd ..
@@ -157,13 +173,22 @@ else
 
         # Open VSS-Joystick
         if [ $STATUS_JOYSTICK == 1 ]; then
+            echo " ";
+            echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}VSS-Joystick${NORMAL}"
             cd VSS-Joystick
             make run &
             cd ..
         fi
 
+        sleep 3;
+        echo " ";
+        echo " "
+        echo "${BOLD}Aperte ${PURPLE}ENTER ${WHITE}para fechar os processos:";
+        read;
+        CLEAN_PROCESS;
     else
-        echo "${NORMAL}${RED}Finalizando ..."
+        echo "${NORMAL}${RED}Finalizando ...";
+        CLEAN_PROCESS;
     fi
 fi
 

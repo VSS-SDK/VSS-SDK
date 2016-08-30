@@ -20,6 +20,8 @@ Instalação
 ```
 $ cd VSS-SDK
 $ sudo chmod 770 configure.sh
+$ sudo chmod 770 run.sh
+$ sudo chmod 770 update.sh
 $ ./configure.sh
 ```
 > Implementada e testada para Ubuntu 16.04
@@ -30,11 +32,21 @@ $ ./configure.sh
 
 
 
+Rodando
+-------
+```
+$ cd VSS-SDK
+$ ./run.sh sim viewer joystick
+```
+
+
+
 Dependências
 ------------
 
 | Pacote                            | Descrição                                              |
 | :-------------------------------: |:------------------------------------------------------:|
+| pkg-config                        | Ferramenta que facilita a compilação                   |
 | g++                               | Compilador de C++98/C++11                              |
 | cmake                             | Ferramenta para construir e testar softwares           |
 | git                               | Software distribuído de controle de versão de software |
