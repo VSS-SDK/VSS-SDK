@@ -51,6 +51,7 @@ Dependências
 | g++                               | Compilador de C++98/C++11                              |
 | cmake                             | Ferramenta para construir e testar softwares           |
 | git                               | Software distribuído de controle de versão de software |
+| opencv                            | Biblioteca de visão computacional                      |
 | uvcdynctrl                        | Software de controle dinâmico de Webcams               |
 | libzmqpp3 libzmqpp-dev            | Biblioteca que implementa interfaces de socket         |
 | protobuf-compiler libprotobuf-dev | Biblioteca para serializar dados estruturados          |
@@ -59,7 +60,7 @@ Dependências
 | doxygen graphviz graphviz-dev     | Gerador de documentação e Gráficos                     |
 | libboost-all-dev                  | Extensão de código para C++                            |
 | freeglut3 freeglut3-dev           | Biblioteca de utilitários OpenGL                       |
-| libbullet-dev                     | Biblioteca de Física                                   |
+| libbullet-dev                     | Biblioteca de física                                   |
 
 
 
