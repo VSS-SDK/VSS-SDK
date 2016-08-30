@@ -26,7 +26,7 @@ $ ./configure.sh
 
 > Implementada para Ubuntu 14.04
 
-> TODO: Implementar para Debian, Fedora e Raspbian
+> TODO: Implementar para Debian, Fedora, Mint e Raspbian
 
 
 
