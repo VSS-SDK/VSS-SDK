@@ -3,15 +3,30 @@ VSS-SDK
 VSS-SDK é *Suite Development Kit* que auxília na construção de um time de futebol de robôs para a categoria *IEEE Very Small Size [Soccer]*, 
 o projeto é constituído de: 
 
-> VSS-Vision: Sistema de Visão Computacional feito com base na categoria IEEE Very Small Size [Soccer] que reconhece e rastreia a bola e os robôs em campo;
+> [VSS-Vision][vision]: Sistema de Visão Computacional feito com base na categoria IEEE Very Small Size [Soccer] que reconhece e rastreia a bola e os robôs em campo;
 
-> VSS-Simulator: Simulador constituído de um campo e de 6 robôs nos padrões da categoria IEEE Very Small Size [Soccer];
+> [VSS-Simulator][simulator]: Simulador constituído de um campo e de 6 robôs nos padrões da categoria IEEE Very Small Size [Soccer];
 
-> VSS-Viewer: Visualizador de estados em 3D que incorpora os ambientes gerados pelos projetos VSS-Vision e VSS-Simulator;
+> [VSS-Viewer][viewer]: Visualizador de estados em 3D que incorpora os ambientes gerados pelos projetos VSS-Vision e VSS-Simulator;
 
-> VSS-SampleStrategy: Demonstração de como utilizar nossa API e comunicar uma estratégia de jogo com o VSS-Vision e VSS-Simulator, além de como enviar comandos para robôs reais;
+> [VSS-SampleStrategy][sample]: Demonstração de como utilizar nossa API e comunicar uma estratégia de jogo com o VSS-Vision e VSS-Simulator, além de como enviar comandos para robôs reais;
 
-> VSS-Joystick:  Demonstração de como utilizar um controle de Playstation 3 (Dualshock 3) para comunicar-se com o VSS-Simulator ou com robôs reais;
+> [VSS-Joystick][joystick]:  Demonstração de como utilizar um controle de Playstation 3 (Dualshock 3) para comunicar-se com o VSS-Simulator ou com robôs reais;
+
+
+
+Instalação
+----------
+```
+$ cd VSS-SDK
+$ sudo chmod 770 configure.sh
+$ ./configure.sh
+```
+> Implementada e testada para Ubuntu 16.04
+> Implementada para Ubuntu 14.04
+> TODO: Implementar para Debian, Fedora e Raspbian
+
+
 
 Dependências
 ------------
@@ -30,3 +45,12 @@ Dependências
 | libboost-all-dev                  | Extensão de código para C++                            |
 | freeglut3 freeglut3-dev           | Biblioteca de utilitários OpenGL                       |
 | libbullet-dev                     | Biblioteca de Física                                   |
+
+
+
+
+[vision]: https://github.com/SIRLab/VSS-Vision
+[simulator]: https://github.com/SIRLab/VSS-Simulator
+[viewer]: https://github.com/SIRLab/VSS-Viewer
+[sample]: https://github.com/SIRLab/VSS-SampleStrategy
+[joystick]: https://github.com/SIRLab/VSS-Joystick

@@ -155,7 +155,7 @@ CONFIGURE_REPOSITORIES () {
     git submodule update
 
     echo " ";
-    echo "${PURPLE}${BOLD}Update, Configure and Compiling VSS-Vision ${WHITE}${NORMAL} (Computer Vision System for IEEE Very Small Size [Soccer])";
+    echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-Vision ${WHITE}${NORMAL} (Computer Vision System for IEEE Very Small Size [Soccer])";
     echo " ";
     sleep 2;
     cd VSS-Vision
@@ -167,7 +167,7 @@ CONFIGURE_REPOSITORIES () {
     cd ..
 
     echo " ";
-    echo "${PURPLE}${BOLD}Update, Configure and Compiling VSS-Simulator ${WHITE}${NORMAL} (Simulator for IEEE Very Small Size [Soccer])";
+    echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-Simulator ${WHITE}${NORMAL} (Simulator for IEEE Very Small Size [Soccer])";
     echo " ";
     sleep 2; 
     cd VSS-Simulator
@@ -178,7 +178,7 @@ CONFIGURE_REPOSITORIES () {
     cd ..
 
     echo " ";
-    echo "${PURPLE}${BOLD}Update, Configure and Compiling VSS-Viewer ${WHITE}${NORMAL} (3D Viewer for the VSS-Vision and VSS-Simulator)";
+    echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-Viewer ${WHITE}${NORMAL} (3D Viewer for the VSS-Vision and VSS-Simulator)";
     echo " ";
     sleep 2;
     cd VSS-Viewer
@@ -189,7 +189,7 @@ CONFIGURE_REPOSITORIES () {
     cd ..
 
     echo " ";
-    echo "${PURPLE}${BOLD}Update, Configure and Compiling VSS-SampleStrategy ${WHITE}${NORMAL} (Sample of Strategy that works with VSS-Vision and VSS-Simulator)";
+    echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-SampleStrategy ${WHITE}${NORMAL} (Sample of Strategy that works with VSS-Vision and VSS-Simulator)";
     echo " ";
     sleep 2;
     cd VSS-SampleStrategy
@@ -200,7 +200,7 @@ CONFIGURE_REPOSITORIES () {
     cd ..
 
     echo " ";
-    echo "${PURPLE}${BOLD}Update, Configure and Compiling VSS-Joystick ${WHITE}${NORMAL} (Sample of how control robots on VSS-Simulator and Real Robots with a Dualshock 3 (PS3 Controller))";
+    echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-Joystick ${WHITE}${NORMAL} (Sample of how control robots on VSS-Simulator and Real Robots with a Dualshock 3 (PS3 Controller))";
     echo " ";
     sleep 2;
     cd VSS-Joystick
