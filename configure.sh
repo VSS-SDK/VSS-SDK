@@ -22,8 +22,7 @@ MAIN_MESSAGE () {
 
     echo " ${RED} If any error occur, ${BOLD}PLEASE${NORMAL}${RED}, create a ${BOLD}ISSUE${NORMAL}${RED} on our ${BOLD}GITHUB${NORMAL}${RED} repository";
     echo " ${WHITE}${BOLD} https://github.com/SIRLab/VSS-SDK/issues ${NORMAL}${RED}and tell us. We'll fix soon.";
-    echo "";
-    
+    echo ""; 
 }
 
 # PRINT THE INFO MESSAGE
