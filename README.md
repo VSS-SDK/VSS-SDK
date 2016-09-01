@@ -63,7 +63,7 @@ Dependências
 | [Opencv][opencv]                          | Biblioteca de visão computacional                      |
 | [Uvcdynctrl][uvcdynctrl]                  | Software de controle dinâmico de Webcams               |
 | [ZeroMQ][zeromq]                          | Biblioteca que implementa interfaces de socket         |
-| [Protobuf][protubuf]                      | Biblioteca para serializar dados estruturados          |
+| [Protobuf][protobuf]                      | Biblioteca para serializar dados estruturados          |
 | [Qt5][qt]                                 | Framework para aplicações e Interface Gráfica          |
 | [SQLite][sqlite]                          | Banco de dados SQL embarcado auto-configurável         |
 | [Doxygen][doxygen]                        | Gerador de documentação                                |
