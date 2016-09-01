@@ -12,6 +12,7 @@ PURPLE=$(tput setaf 5)
 BLUE=$(tput setaf 12)
 BOLD=$(tput bold)
 NORMAL=$(tput sgr0)
+INSTALLED=0
 
 
 # PRINT THE MAIN MESSAGE
@@ -80,6 +81,7 @@ INSTALL_UBUNTU_16_04 () {
     cd ..
     cd ..
     echo " ";
+    INSTALLED=1
 }
 
 INSTALL_UBUNTU_14_04 () {
@@ -127,6 +129,55 @@ INSTALL_UBUNTU_14_04 () {
     cd ..
     cd ..
     echo " ";
+    INSTALLED=1
+}
+
+INSTALL_DEBIAN_8_2 () {
+    echo " ";
+    echo "${BLUE}${BOLD}Apt-Get Update & Upgrade ${WHITE}${NORMAL} (Update and upgrade all packets)"
+    echo " ";
+    sleep 3;
+    sudo apt-get update && apt-get upgrade
+
+    echo " ";
+    echo "${BLUE}${BOLD}Apt-Get Install: Pkg-Config ${WHITE}${NORMAL} (Helper tool used when compiling applications and libraries)"
+    echo " ";
+    sleep 3;
+    sudo apt-get install pkgconf
+
+    echo " ";
+    echo "${BLUE}${BOLD}Apt-Get Install:${WHITE}${NORMAL}";
+    echo " ${BLUE}  g++ ${WHITE}(C++ compiler)";
+    echo " ${BLUE}  cmake ${WHITE}(Tool to build, test and package software)";
+    echo " ${BLUE}  git ${WHITE}(Distributed version control of software)";
+    echo " ${BLUE}  uvcdynctrl ${WHITE}(Dynamic control of webcams)";
+    echo " ${BLUE}  libzmq3 libzmq3-dev ${WHITE}(Library which implements socket interfaces)";
+    echo " ${BLUE}  protobuf-compiler libprotobuf-dev ${WHITE}(Mechanism for serializing structured data)";
+    echo " ${BLUE}  qt5-default qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev ${WHITE}(Framework for applications and user interfaces)";
+    echo " ${BLUE}  libsqlite3-dev ${WHITE}(Embeddable, zero-configuration SQL database engine)"
+    echo " ${BLUE}  doxygen graphviz graphviz graphviz-dev ${WHITE}(Generator of documentation and graphs)"
+    echo " ${BLUE}  libboost-all-dev ${WHITE}(Peer-reviewed portable C++ source libraries)"
+    echo " ${BLUE}  freeglut3 freeglut3-dev ${WHITE}(OpenGL Utility Toolkit (GLUT) library)"
+    echo " ${BLUE}  libbullet-dev ${WHITE}(Physics Library)"
+    echo " ";
+    sleep 5;
+    sudo apt-get install g++ cmake git uvcdynctrl libzmq3 libzmq3-dev protobuf-compiler libprotobuf-dev qt5-default qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev doxygen graphviz graphviz graphviz-dev libboost-all-dev freeglut3 freeglut3-dev libbullet-dev
+
+    echo " ";
+    echo "${BLUE}${BOLD}Install from Github: OpenCV${WHITE}${NORMAL} (Library of real-time computer vision)";
+    echo " ";
+    sleep 3;
+    git clone https://github.com/Itseez/opencv.git
+    cd opencv
+    mkdir build && cd build
+    cmake ..
+    make -j8
+    sudo make install
+    sudo ldconfig
+    cd ..
+    cd ..
+    echo " ";
+    INSTALLED=1
 }
 
 INSTALL_DEBIAN_8_5 () {
@@ -174,6 +225,7 @@ INSTALL_DEBIAN_8_5 () {
     cd ..
     cd ..
     echo " ";
+    INSTALLED=1
 }
 
 INSTALL () {
@@ -184,14 +236,23 @@ INSTALL () {
             if [[ "$RELEASE" == "14.04" ]]; then
                 INSTALL_UBUNTU_14_04;
             else
-                echo "Ubuntu Unknown";
+                echo "${RED}${BOLD}Ubuntu Unknown";
             fi 
         fi    
     else
         if [[ "$DISTRO" == "Debian" ]]; then
-            INSTALL_DEBIAN_8_5;
+            if [[ "$RELEASE" == "8.5" ]]; then
+                INSTALL_DEBIAN_8_5;
+            else
+                if [[ "$RELEASE" == "8.2" ]]; then
+                    INSTALL_DEBIAN_8_2;
+                else
+                    echo "${RED}${BOLD}Debian Unknown";
+                fi
+                
+            fi     
         else
-            echo "unknown"
+            echo "${RED}${BOLD}Linux Unknown"
         fi
     fi
 }
@@ -261,23 +322,19 @@ CONFIGURE_REPOSITORIES () {
     cd ..
 }
 
-EXIT_MESSAGE () {
-    echo " ";
-    echo "${GREEN}${BOLD}DONE!${WHITE}${NORMAL} (Give a feedback on our Github, and see run.sh and update.sh)";
-    echo " ";
-    sleep 2
-}
-
-
 MAIN_MESSAGE;
 
 INFO_MESSAGE;
 
 INSTALL;
 
-CONFIGURE_REPOSITORIES;
+if [ $INSTALLED == 1 ]; then
+    CONFIGURE_REPOSITORIES;
+    ./update.sh
+else
+     echo "${NORMAL}${RED}Exiting ...${WHITE}";
+fi 
 
-EXIT_MESSAGE;
 
-./update.sh
+
 

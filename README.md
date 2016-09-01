@@ -24,22 +24,29 @@ $ sudo chmod 770 run.sh
 $ sudo chmod 770 update.sh
 $ ./configure.sh
 ```
-> Implementada e testada para Ubuntu 16.04
-
-> Implementada para Ubuntu 14.04
-
-> Implementada para Debian 8.5 
+> Implementada para Ubuntu 16.04, Ubuntu 14.04, Debian 8.5 e Debian 8.2
 
 TODO: Implementar para Fedora, Mint e Raspbian
 
 
 
-Rodando
--------
-Ver [Manual][manual] de como utilizar ./run.sh
+Atualizando
+-----------
 ```
 $ cd VSS-SDK
-$ ./run.sh
+$ ./update.sh
+```
+
+
+
+Instalação
+----------
+```
+$ cd VSS-SDK
+$ sudo chmod 770 configure.sh
+$ sudo chmod 770 run.sh
+$ sudo chmod 770 update.sh
+$ ./configure.sh
 ```
 
 
@@ -47,22 +54,23 @@ $ ./run.sh
 Dependências
 ------------
 
-| Pacote                            | Descrição                                              |
-| :-------------------------------: |:------------------------------------------------------:|
-| pkg-config                        | Ferramenta que facilita a compilação                   |
-| g++                               | Compilador de C++98/C++11                              |
-| cmake                             | Ferramenta para construir e testar softwares           |
-| git                               | Software distribuído de controle de versão de software |
-| opencv                            | Biblioteca de visão computacional                      |
-| uvcdynctrl                        | Software de controle dinâmico de Webcams               |
-| libzmqpp3 libzmqpp-dev            | Biblioteca que implementa interfaces de socket         |
-| protobuf-compiler libprotobuf-dev | Biblioteca para serializar dados estruturados          |
-| qt5                               | Framework para aplicações e Interface Gráfica          |
-| libsqlite3-dev                    | Banco de dados SQL embarcado auto-configurável         |
-| doxygen graphviz graphviz-dev     | Gerador de documentação e Gráficos                     |
-| libboost-all-dev                  | Extensão de código para C++                            |
-| freeglut3 freeglut3-dev           | Biblioteca de utilitários OpenGL                       |
-| libbullet-dev                     | Biblioteca de física                                   |
+| Pacote                                    | Descrição                                              |
+| :---------------------------------------: |:------------------------------------------------------:|
+| [Pkg-config][pkg-config]                  | Ferramenta que facilita a compilação                   |
+| [G++][gpp]                                | Compilador de C++98/C++11                              |
+| [Cmake][cmake]                            | Ferramenta para construir e testar softwares           |
+| [Git][git]                                | Software distribuído de controle de versão de software |
+| [Opencv][opencv]                          | Biblioteca de visão computacional                      |
+| [Uvcdynctrl][uvcdynctrl]                  | Software de controle dinâmico de Webcams               |
+| [ZeroMQ][zeromq]                          | Biblioteca que implementa interfaces de socket         |
+| [Protobuf][protubuf]                      | Biblioteca para serializar dados estruturados          |
+| [Qt5][qt]                                 | Framework para aplicações e Interface Gráfica          |
+| [SQLite][sqlite]                          | Banco de dados SQL embarcado auto-configurável         |
+| [Doxygen][doxygen]                        | Gerador de documentação                                |
+| [Graphviz][graphviz]                      | Gerador de gráficos                                    |
+| [Boost][boost]                            | Extensão de código para C++                            |
+| [Glut][glut]                              | Biblioteca de utilitários OpenGL                       |
+| [Bullet Physics][bullet]                  | Biblioteca de física                                   |
 
 
 
@@ -73,3 +81,19 @@ Dependências
 [sample]: https://github.com/SIRLab/VSS-SampleStrategy
 [joystick]: https://github.com/SIRLab/VSS-Joystick
 [manual]: https://github.com/SIRLab/VSS-SDK/blob/master/MANUAL.md
+
+[pkg-config]: https://github.com/pkgconf/pkgconf
+[gpp]: http://www.cprogramming.com/g++.html
+[cmake]: https://cmake.org/
+[git]: https://git-scm.com/
+[opencv]: http://opencv.org/
+[uvcdynctrl]: https://sourceforge.net/projects/libwebcam/
+[zeromq]: http://zeromq.org/
+[protobuf]: https://developers.google.com/protocol-buffers/
+[qt]: https://www.qt.io/
+[sqlite]: https://sqlite.org/
+[doxygen]: http://www.stack.nl/~dimitri/doxygen/
+[graphviz]: http://www.graphviz.org/
+[boost]: http://www.boost.org/
+[glut]: https://www.opengl.org/resources/libraries/glut/
+[bullet]: http://bulletphysics.org/wordpress/
