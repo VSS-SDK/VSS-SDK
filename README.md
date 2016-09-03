@@ -1,11 +1,15 @@
 VSS-SDK 
 =======
 [![badge](https://img.shields.io/badge/Ubuntu%2016.04-Working-brightgreen.svg)][badges]
+
 [![badge](https://img.shields.io/badge/Ubuntu%2014.04-Should%20Work-yellow.svg)][badges]
+
 [![badge](https://img.shields.io/badge/Debian%208.2-Working-brightgreen.svg)][badges]
+
 [![badge](https://img.shields.io/badge/Debian%208.5-Should%20Work-yellow.svg)][badges]
-[![badge](https://img.shields.io/badge/Debian%208.5-Should%20Work-yellow.svg)][badges]
+
 [![badge](https://img.shields.io/badge/Fedora%2024-Not%20Implemented%20Yet-red.svg)][badges]
+
 [![badge](https://img.shields.io/badge/Mint%2018-Not%20Implemented%20Yet-red.svg)][badges]
 
 
