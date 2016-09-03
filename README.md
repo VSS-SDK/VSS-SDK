@@ -2,10 +2,10 @@ VSS-SDK
 =======
 [![badge](https://img.shields.io/badge/Ubuntu-16.04-brightgreen.svg)][badges]
 [![badge](https://img.shields.io/badge/Ubuntu-14.04-yellow.svg)][badges]
-[![badge](https://img.shields.io/badge/Debian%208.2-Working-brightgreen.svg)][badges]
-[![badge](https://img.shields.io/badge/Debian%208.5-Should%20Work-yellow.svg)][badges]
-[![badge](https://img.shields.io/badge/Fedora%2024-Not%20Implemented%20Yet-red.svg)][badges]
-[![badge](https://img.shields.io/badge/Mint%2018-Not%20Implemented%20Yet-red.svg)][badges]
+[![badge](https://img.shields.io/badge/Debian-8.2-brightgreen.svg)][badges]
+[![badge](https://img.shields.io/badge/Debian-8.5-yellow.svg)][badges]
+[![badge](https://img.shields.io/badge/Fedora-24-red.svg)][badges]
+[![badge](https://img.shields.io/badge/Mint-18-red.svg)][badges]
 
 
 VSS-SDK é *Suite Development Kit* que auxília na construção de um time de futebol de robôs para a categoria *IEEE Very Small Size [Soccer]*, 
