@@ -1,5 +1,14 @@
 VSS-SDK 
 =======
+[![badge](https://img.shields.io/badge/Ubuntu%2016.04-Working-brightgreen.svg)][badges]
+[![badge](https://img.shields.io/badge/Ubuntu%2014.04-Should%20Work-yellow.svg)][badges]
+[![badge](https://img.shields.io/badge/Debian%208.2-Working-brightgreen.svg)][badges]
+[![badge](https://img.shields.io/badge/Debian%208.5-Should%20Work-yellow.svg)][badges]
+[![badge](https://img.shields.io/badge/Debian%208.5-Should%20Work-yellow.svg)][badges]
+[![badge](https://img.shields.io/badge/Fedora%2024-Not%20Implemented%20Yet-red.svg)][badges]
+[![badge](https://img.shields.io/badge/Mint%2018-Not%20Implemented%20Yet-red.svg)][badges]
+
+
 VSS-SDK é *Suite Development Kit* que auxília na construção de um time de futebol de robôs para a categoria *IEEE Very Small Size [Soccer]*, 
 o projeto é constituído de: 
 
@@ -96,3 +105,5 @@ Dependências
 [boost]: http://www.boost.org/
 [glut]: https://www.opengl.org/resources/libraries/glut/
 [bullet]: http://bulletphysics.org/wordpress/
+
+[badges]: http://shields.io/
