@@ -13,40 +13,38 @@ o projeto é constituído de:
 
 > [VSS-Joystick][joystick]:  Demonstração de como utilizar um controle de Playstation 3 (Dualshock 3) para comunicar-se com o VSS-Simulator ou com robôs reais;
 
-
-
-Instalação
-----------
+Instalando, Inicializando e Atualizando
+---------------------------------------
+Se não possuir todas as depêndencias instaladas
 ```
 $ cd VSS-SDK
 $ sudo chmod 770 configure.sh
+$ sudo chmod 770 init.sh
 $ sudo chmod 770 run.sh
 $ sudo chmod 770 update.sh
+```
+
+Baixando todas as depêndencias, Inicializando todos os Repositórios, Atualizando os Repositórios
+```
+$ cd VSS-SDK
 $ ./configure.sh
 ```
-> Implementada para Ubuntu 16.04, Ubuntu 14.04, Debian 8.5 e Debian 8.2
 
-TODO: Implementar para Fedora, Mint e Raspbian
-
+Inicializando e Atualizando
+---------------------------
+Se possuir todas as depêndencias instaladas
+```
+$ cd VSS-SDK
+$ ./init.sh
+```
 
 
 Atualizando
 -----------
+Atualiza os projetos para as versões mais recentes
 ```
 $ cd VSS-SDK
 $ ./update.sh
-```
-
-
-
-Instalação
-----------
-```
-$ cd VSS-SDK
-$ sudo chmod 770 configure.sh
-$ sudo chmod 770 run.sh
-$ sudo chmod 770 update.sh
-$ ./configure.sh
 ```
 
 

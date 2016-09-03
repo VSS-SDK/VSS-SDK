@@ -257,70 +257,6 @@ INSTALL () {
     fi
 }
 
-CONFIGURE_REPOSITORIES () {
-    echo " ";
-    echo "${PURPLE}${BOLD}Download All Projects ${WHITE}${NORMAL} (VSS-Vision, VSS-Simulator, VSS-Viewer, VSS-SampleStrategy, VSS-Joystick)";
-    echo " ";
-    sleep 2;
-    git submodule init
-    git submodule update
-
-    echo " ";
-    echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-Vision ${WHITE}${NORMAL} (Computer Vision System for IEEE Very Small Size [Soccer])";
-    echo " ";
-    sleep 2;
-    cd VSS-Vision
-    git submodule init
-    git submodule update
-    make proto
-    make qt
-    make
-    cd ..
-
-    echo " ";
-    echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-Simulator ${WHITE}${NORMAL} (Simulator for IEEE Very Small Size [Soccer])";
-    echo " ";
-    sleep 2; 
-    cd VSS-Simulator
-    git submodule init
-    git submodule update
-    make proto
-    make
-    cd ..
-
-    echo " ";
-    echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-Viewer ${WHITE}${NORMAL} (3D Viewer for the VSS-Vision and VSS-Simulator)";
-    echo " ";
-    sleep 2;
-    cd VSS-Viewer
-    git submodule init
-    git submodule update
-    make proto
-    make
-    cd ..
-
-    echo " ";
-    echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-SampleStrategy ${WHITE}${NORMAL} (Sample of Strategy that works with VSS-Vision and VSS-Simulator)";
-    echo " ";
-    sleep 2;
-    cd VSS-SampleStrategy
-    git submodule init
-    git submodule update
-    make proto
-    make
-    cd ..
-
-    echo " ";
-    echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-Joystick ${WHITE}${NORMAL} (Sample of how control robots on VSS-Simulator and Real Robots with a Dualshock 3 (PS3 Controller))";
-    echo " ";
-    sleep 2;
-    cd VSS-Joystick
-    git submodule init
-    git submodule update
-    make proto
-    make
-    cd ..
-}
 
 MAIN_MESSAGE;
 
@@ -329,7 +265,7 @@ INFO_MESSAGE;
 INSTALL;
 
 if [ $INSTALLED == 1 ]; then
-    CONFIGURE_REPOSITORIES;
+    ./init.sh
     ./update.sh
 else
      echo "${NORMAL}${RED}Exiting ...${WHITE}";
