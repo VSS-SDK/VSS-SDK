@@ -30,12 +30,13 @@ $ cd VSS-SDK
 $ ./configure.sh
 ```
 
-Inicializando e Atualizando
----------------------------
+Inicializando
+-------------
 Se possuir todas as depêndencias instaladas
 ```
 $ cd VSS-SDK
 $ ./init.sh
+$ ./update.sh
 ```
 
 
