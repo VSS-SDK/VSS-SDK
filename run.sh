@@ -15,12 +15,14 @@ STATUS_JOYSTICK=0
 STATUS_SIMULATOR=0
 STATUS_YELLOW_TEAM=0
 STATUS_BLUE_TEAM=0
+YELLOW_NAME=0
+BLUE_NAME=0
 EXECUTION_OK=1
 
 MAIN_MESSAGE () {
     echo "${WHITE}${BOLD}-----------------------------------------------------------------"
     echo "- IEEE Very Small Size [Soccer] Suite Development Kit (VSS-SDK) -";
-    echo "-----------------------------------------------------------------"
+    echo "-----------------------------------------------------------------${NORMAL}"
 }
 
 MAN () {
@@ -112,7 +114,21 @@ CHECK_SIMULATOR () {
 }
 
 CHECK_YELLOW () {
-    echo "$1" | grep 'yellow' 
+    OUTPUT_YELLOW=$(echo "$1" | grep 'yellow=')
+    if [[ "$OUTPUT_YELLOW" != "" ]]; then
+        STATUS_YELLOW_TEAM=1
+        YELLOW_NAME=$OUTPUT_YELLOW
+        YELLOW_NAME=$(echo $YELLOW_NAME | cut -d"=" -f 2)
+    fi
+}
+
+CHECK_BLUE () {
+    OUTPUT_BLUE=$(echo "$1" | grep 'blue=')
+    if [[ "$OUTPUT_BLUE" != "" ]]; then
+        STATUS_BLUE_TEAM=1
+        BLUE_NAME=$OUTPUT_BLUE
+        BLUE_NAME=$(echo $BLUE_NAME | cut -d"=" -f 2)
+    fi
 }
 
 intexit() {
@@ -135,8 +151,7 @@ MAIN_MESSAGE;
 if [ $# -eq 0 ]; then
     MAN;
 else
-    CLEAN_PROCESS;
-    echo "${WHITE}${BOLD} - EXECUCAO - ";
+    echo "${WHITE}${BOLD} - EXECUCAO - ${NORMAL}";
 
     # Check all inputs
     for i in $*; do 
@@ -144,7 +159,8 @@ else
         CHECK_VIEWER $i
         CHECK_JOYSTICK $i
         CHECK_SIMULATOR $i
-        CHECK_YELLOW $1
+        CHECK_YELLOW $i
+        CHECK_BLUE $i
     done
     
     # Check invalid combinations
@@ -193,10 +209,27 @@ else
             cd ..
         fi
 
+        # Open Yellow Strategy
+        if [ $STATUS_YELLOW_TEAM == 1 ]; then
+            echo " ";
+            echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}Yellow Strategy${NORMAL}"
+            cd Strategies
+            ./$YELLOW_NAME -c yellow &
+            cd ..
+        fi
+
+        # Open Blue Strategy
+        if [ $STATUS_BLUE_TEAM == 1 ]; then
+            echo " ";
+            echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}Blue Strategy${NORMAL}"
+            cd Strategies
+            ./$BLUE_NAME -c blue &
+            cd ..
+        fi
+
         wait;
     else
         echo "${NORMAL}${RED}Finalizando ...";
-        CLEAN_PROCESS;
     fi
 fi
 
