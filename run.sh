@@ -111,13 +111,24 @@ CHECK_SIMULATOR () {
     fi
 }
 
-CLEAN_PROCESS () {
-    sudo killall VSS-Simulation
-    sudo killall VSS-Vision
-    sudo killall VSS-Viewer
-    sudo killall VSS-Joystick
-    sudo killall VSS-SampleStrategy
+CHECK_YELLOW () {
+    echo "$1" | grep 'yellow' 
 }
+
+intexit() {
+    # Kill all subprocesses (all processes in the current process group)
+    kill -HUP -$$
+}
+
+hupexit() {
+    # HUP'd (probably by intexit)
+    echo
+    echo "Interrupted"
+    exit
+}
+
+trap hupexit HUP
+trap intexit INT
 
 MAIN_MESSAGE;
 
@@ -133,6 +144,7 @@ else
         CHECK_VIEWER $i
         CHECK_JOYSTICK $i
         CHECK_SIMULATOR $i
+        CHECK_YELLOW $1
     done
     
     # Check invalid combinations
@@ -181,15 +193,12 @@ else
             cd ..
         fi
 
-        sleep 3;
-        echo " ";
-        echo " "
-        echo "${BOLD}Aperte ${PURPLE}ENTER ${WHITE}para fechar os processos:";
-        read;
-        CLEAN_PROCESS;
+        wait;
     else
         echo "${NORMAL}${RED}Finalizando ...";
         CLEAN_PROCESS;
     fi
 fi
+
+
 
