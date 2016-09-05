@@ -172,6 +172,14 @@ else
         fi
     fi
 
+    if [ $STATUS_JOYSTICK == 1 ]; then
+         if [[ "$BLUE_NAME" == "joy" || "$YELLOW_NAME" = "joy" ]]; then
+           	echo " ";
+            echo "${RED}${BOLD}[ERRO DE COMBINACAO]: ${WHITE}Somente 1 VSS-Joystick pode ser aberto por vez."
+            EXECUTION_OK=0
+         fi
+    fi
+
     if [ $EXECUTION_OK == 1 ]; then
         # Open VSS-Vision
         if [ $STATUS_VISION == 1 ]; then
@@ -201,30 +209,48 @@ else
         fi
 
         # Open VSS-Joystick
-        if [ $STATUS_JOYSTICK == 1 ]; then
-            echo " ";
-            echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}VSS-Joystick${NORMAL}"
-            cd VSS-Joystick
-            make run &
-            cd ..
+        if [[ "$BLUE_NAME" != "joy" && "$YELLOW_NAME" != "joy" ]]; then
+            if [ $STATUS_JOYSTICK == 1 ]; then
+                echo " ";
+                echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}VSS-Joystick${NORMAL}"
+                cd VSS-Joystick
+                make run &
+                cd ..
+            fi
         fi
 
         # Open Yellow Strategy
         if [ $STATUS_YELLOW_TEAM == 1 ]; then
             echo " ";
             echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}Yellow Strategy${NORMAL}"
-            cd Strategies
-            ./$YELLOW_NAME -c yellow &
-            cd ..
+            if [[ "$BLUE_NAME" != "joy" ]]; then
+                cd Strategies
+                ./$YELLOW_NAME -c yellow &
+                cd ..
+            else
+                echo " ";
+                echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}VSS-Joystick How Yellow Strategy${NORMAL}"
+                cd VSS-Joystick
+                make run &
+                cd ..
+            fi
         fi
 
         # Open Blue Strategy
         if [ $STATUS_BLUE_TEAM == 1 ]; then
             echo " ";
             echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}Blue Strategy${NORMAL}"
-            cd Strategies
-            ./$BLUE_NAME -c blue &
-            cd ..
+            if [[ "$BLUE_NAME" != "joy" ]]; then
+                cd Strategies
+                ./$YBLUE_NAME -c blue &
+                cd ..
+            else
+                echo " ";
+                echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}VSS-Joystick How Blue Strategy${NORMAL}"
+                cd VSS-Joystick
+                make run &
+                cd ..
+            fi
         fi
 
         wait;
