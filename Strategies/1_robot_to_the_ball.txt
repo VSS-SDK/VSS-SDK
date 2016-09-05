@@ -1,0 +1,4 @@
+Seg Set 5 10:01:15 BRT 2016
+Strategy:  1_robot_to_the_ball
+Author: john
+Comment:  Um exemplo simples de como mandar um robô ir para a bola

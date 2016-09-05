@@ -57,6 +57,16 @@ $ ./update.sh
 ```
 
 
+Exportando uma Estratégia
+-------------------------
+Exporta um VSS-SampleStrategy para Strategies, assim facilitando a execução.
+```
+$ cd VSS-SDK
+$ ./export.sh
+$ ./run.sh sim viewer yellow=name_of_strategy
+```
+
+
 
 Dependências
 ------------
