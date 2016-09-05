@@ -3,7 +3,7 @@ VSS-SDK
 
 Como utilizar ./run.sh
 ----------------------
-Existem quatro Tags que podem ser utilizadas no ./run.sh: **vision, sim, viewer, joy, yellow=nome_da_estrategia_exportada e blue=nome_da_estrategia_exportada**. É possivel combina-las da seguinte forma:
+Existem seis Tags que podem ser utilizadas no ./run.sh: **vision, sim, viewer, joy, yellow=nome_da_estrategia e blue=nome_da_estrategia**. É possivel combina-las da seguinte forma:
 
 ### Abrir somente o VSS-Vision
 ```
