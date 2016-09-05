@@ -57,6 +57,16 @@ $ ./update.sh
 ```
 
 
+Executando
+----------
+Ver [Manual][manual] de execução.
+```
+$ cd VSS-SDK
+$ ./run.sh sim viewer or ./run.sh vision viewer ...
+```
+
+
+
 Exportando uma Estratégia
 -------------------------
 Exporta um VSS-SampleStrategy para Strategies, assim facilitando a execução.
