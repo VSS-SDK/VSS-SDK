@@ -15,7 +15,7 @@ STATUS_JOYSTICK=0
 STATUS_SIMULATOR=0
 STATUS_YELLOW_TEAM=0
 STATUS_BLUE_TEAM=0
-STATUS_SAMPLE=0
+STATUS_DEBUG=0
 YELLOW_NAME=0
 BLUE_NAME=0
 EXECUTION_OK=1
@@ -114,8 +114,10 @@ CHECK_SIMULATOR () {
     fi
 }
 
-CHECK_SAMPLE () {
-
+CHECK_DEBUG () {
+    if [[ "$1" == "debug" ]]; then
+        STATUS_DEBUG=1
+    fi
 }
 
 CHECK_YELLOW () {
@@ -166,6 +168,7 @@ else
         CHECK_SIMULATOR $i
         CHECK_YELLOW $i
         CHECK_BLUE $i
+        CHECK_DEBUG $i
     done
     
     # Check invalid combinations
@@ -185,7 +188,18 @@ else
          fi
     fi
 
+    if [[ $STATUS_DEBUG == 1 && $STATUS_VIEWER == 0 ]]; then
+        echo " ";
+        echo "${YELLOW}${BOLD}[ERRO DE COMBINACAO]: ${WHITE}Para ativar o debug é necessário ativar o viewer."
+        STATUS_DEBUG=0
+    fi
+
     if [ $EXECUTION_OK == 1 ]; then
+        if [ $STATUS_DEBUG == 1 ]; then
+            echo " ";
+            echo "${PURPLE}${BOLD}[MODO DE DEBUG]: ${WHITE}Ligado${NORMAL}"
+        fi
+
         # Open VSS-Vision
         if [ $STATUS_VISION == 1 ]; then
             echo " ";
@@ -209,7 +223,11 @@ else
             echo " ";
             echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}VSS-Viewer${NORMAL}"
             cd VSS-Viewer
-            make run &
+            if [ $STATUS_DEBUG == 1 ]; then
+                make debug &
+            else
+                make run &
+            fi
             cd ..
         fi
 
@@ -228,11 +246,31 @@ else
         if [ $STATUS_YELLOW_TEAM == 1 ]; then
             echo " ";
             echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}Yellow Strategy${NORMAL}"
-            if [[ "$BLUE_NAME" != "joy" ]]; then
-                cd Strategies
-                ./$YELLOW_NAME -c yellow &
-                cd ..
-            else
+            if [[ "$YELLOW_NAME" != "joy" ]]; then
+
+                if [ $STATUS_DEBUG == 1 ]; then
+                    if [[ "$YELLOW_NAME" != "sample" ]]; then
+                        cd Strategies
+                        ./$YELLOW_NAME -c yellow -d &
+                        cd ..
+                    else
+                        cd VSS-SampleStrategy
+                        ./VSS-SampleStrategy -c yellow -d &
+                        cd ..
+                    fi
+                else
+                    if [[ "$YELLOW_NAME" != "sample" ]]; then
+                        cd Strategies
+                        ./$YELLOW_NAME -c yellow &
+                        cd ..
+                    else
+                        cd VSS-SampleStrategy
+                        ./VSS-SampleStrategy -c yellow &
+                        cd ..
+                    fi
+                fi
+                
+            else    # JOYSTICK
                 echo " ";
                 echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}VSS-Joystick How Yellow Strategy${NORMAL}"
                 cd VSS-Joystick
@@ -246,9 +284,29 @@ else
             echo " ";
             echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}Blue Strategy${NORMAL}"
             if [[ "$BLUE_NAME" != "joy" ]]; then
-                cd Strategies
-                ./$YBLUE_NAME -c blue &
-                cd ..
+                
+                if [ $STATUS_DEBUG == 1 ]; then
+                    if [[ "$BLUE_NAME" != "sample" ]]; then
+                        cd Strategies
+                        ./$BLUE_NAME -c blue -d &
+                        cd ..
+                    else
+                        cd VSS-SampleStrategy
+                        ./VSS-SampleStrategy -c blue -d &
+                        cd ..
+                    fi
+                else
+                    if [[ "$BLUE_NAME" != "sample" ]]; then
+                        cd Strategies
+                        ./$BLUE_NAME -c blue &
+                        cd ..
+                    else
+                        cd VSS-SampleStrategy
+                        ./VSS-SampleStrategy -c blue &
+                        cd ..
+                    fi
+                fi
+
             else
                 echo " ";
                 echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}VSS-Joystick How Blue Strategy${NORMAL}"

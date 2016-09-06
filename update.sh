@@ -28,6 +28,10 @@ UPDATE_REPOSITORIES () {
     sleep 2;
     cd VSS-Vision
     git pull https://github.com/SIRLab/VSS-Vision.git 
+    cd src/VSS-Interface
+    git pull https://github.com/SIRLab/VSS-Interface.git
+    cd ..
+    cd ..
     make proto
     make qt
     make
@@ -39,6 +43,10 @@ UPDATE_REPOSITORIES () {
     sleep 2; 
     cd VSS-Simulator
     git pull https://github.com/SIRLab/VSS-Simulator.git
+    cd src/VSS-Interface
+    git pull https://github.com/SIRLab/VSS-Interface.git
+    cd ..
+    cd ..
     make proto
     make
     cd ..
@@ -49,6 +57,10 @@ UPDATE_REPOSITORIES () {
     sleep 2;
     cd VSS-Viewer
     git pull https://github.com/SIRLab/VSS-Viewer.git
+    cd src/VSS-Interface
+    git pull https://github.com/SIRLab/VSS-Interface.git
+    cd ..
+    cd ..
     make proto
     make
     cd ..
@@ -59,6 +71,10 @@ UPDATE_REPOSITORIES () {
     sleep 2;
     cd VSS-SampleStrategy
     git pull https://github.com/SIRLab/VSS-SampleStrategy.git
+    cd src/VSS-Interface
+    git pull https://github.com/SIRLab/VSS-Interface.git
+    cd ..
+    cd ..
     make proto
     make
     cd ..
@@ -69,6 +85,10 @@ UPDATE_REPOSITORIES () {
     sleep 2;
     cd VSS-Joystick
     git pull https://github.com/SIRLab/VSS-Joystick.git
+    cd src/VSS-Interface
+    git pull https://github.com/SIRLab/VSS-Interface.git
+    cd ..
+    cd ..
     make proto
     make
     cd ..
