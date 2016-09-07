@@ -27,6 +27,7 @@ UPDATE_REPOSITORIES () {
     echo " ";
     sleep 2;
     cd VSS-Vision
+    git reset --hard HEAD
     git pull https://github.com/SIRLab/VSS-Vision.git 
     cd src/VSS-Interface
     git pull https://github.com/SIRLab/VSS-Interface.git
@@ -42,6 +43,7 @@ UPDATE_REPOSITORIES () {
     echo " ";
     sleep 2; 
     cd VSS-Simulator
+    git reset --hard HEAD
     git pull https://github.com/SIRLab/VSS-Simulator.git
     cd src/VSS-Interface
     git pull https://github.com/SIRLab/VSS-Interface.git
@@ -56,6 +58,7 @@ UPDATE_REPOSITORIES () {
     echo " ";
     sleep 2;
     cd VSS-Viewer
+    git reset --hard HEAD
     git pull https://github.com/SIRLab/VSS-Viewer.git
     cd src/VSS-Interface
     git pull https://github.com/SIRLab/VSS-Interface.git
@@ -70,6 +73,7 @@ UPDATE_REPOSITORIES () {
     echo " ";
     sleep 2;
     cd VSS-SampleStrategy
+    git reset --hard HEAD
     git pull https://github.com/SIRLab/VSS-SampleStrategy.git
     cd src/VSS-Interface
     git pull https://github.com/SIRLab/VSS-Interface.git
@@ -84,6 +88,7 @@ UPDATE_REPOSITORIES () {
     echo " ";
     sleep 2;
     cd VSS-Joystick
+    git reset --hard HEAD
     git pull https://github.com/SIRLab/VSS-Joystick.git
     cd src/VSS-Interface
     git pull https://github.com/SIRLab/VSS-Interface.git
