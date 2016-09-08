@@ -1,7 +1,7 @@
 VSS-SDK 
 =======
-[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg?maxAge=2592000)](https://github.com/SIRLab/VSS-SDK)
-[![Github Releases](https://img.shields.io/github/release/SIRLab/VSS-SDK.svg)](https://github.com/SIRLab/VSS-SDK)
+[![GitHub release](https://img.shields.io/github/release/SIRLab/VSS-SDK.svg)](https://github.com/SIRLab/VSS-SDK)
+[![Github Releases](https://img.shields.io/github/downloads/SIRLab/VSS-SDK/total.svg)](https://github.com/SIRLab/VSS-SDK)
 
 
 VSS-SDK é *Suite Development Kit* que auxília na construção de um time de futebol de robôs para a categoria *IEEE Very Small Size [Soccer]*, 
