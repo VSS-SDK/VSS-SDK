@@ -1,11 +1,9 @@
 VSS-SDK 
 =======
-[![badge](https://img.shields.io/badge/Ubuntu-16.04-brightgreen.svg)][badges]
-[![badge](https://img.shields.io/badge/Ubuntu-14.04-brightgreen.svg)][badges]
-[![badge](https://img.shields.io/badge/Debian-8.2-brightgreen.svg)][badges]
-[![badge](https://img.shields.io/badge/Debian-8.5-yellow.svg)][badges]
-[![badge](https://img.shields.io/badge/Fedora-24-red.svg)][badges]
-[![badge](https://img.shields.io/badge/Mint-18-red.svg)][badges]
+[![GitHub release](https://img.shields.io/github/release/SIRLab/VSS-SDK.svg?maxAge=2592000)](https://github.com/SIRLab/VSS-SDK)
+[![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/SIRLab/VSS-SDK.svg?maxAge=2592000)](https://github.com/SIRLab/VSS-SDK)
+[![Github Releases](https://img.shields.io/github/downloads/SIRLab/VSS-SDK/total.svg?maxAge=2592000)](https://github.com/SIRLab/VSS-SDK)
+
 
 
 VSS-SDK é *Suite Development Kit* que auxília na construção de um time de futebol de robôs para a categoria *IEEE Very Small Size [Soccer]*, 
@@ -100,6 +98,15 @@ Dependências
 | [Bullet Physics][bullet]                  | Biblioteca de física                                   |
 
 
+Configurando nas Distros
+------------------------
+
+[![badge](https://img.shields.io/badge/Ubuntu-16.04-brightgreen.svg)][badges]
+[![badge](https://img.shields.io/badge/Ubuntu-14.04-brightgreen.svg)][badges]
+[![badge](https://img.shields.io/badge/Debian-8.2-brightgreen.svg)][badges]
+[![badge](https://img.shields.io/badge/Debian-8.5-yellow.svg)][badges]
+[![badge](https://img.shields.io/badge/Fedora-24-red.svg)][badges]
+[![badge](https://img.shields.io/badge/Mint-18-red.svg)][badges]
 
 
 [vision]: https://github.com/SIRLab/VSS-Vision
