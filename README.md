@@ -1,5 +1,6 @@
 VSS-SDK 
 =======
+[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg?maxAge=2592000)](https://github.com/SIRLab/VSS-SDK)
 [![Github Releases](https://img.shields.io/github/downloads/atom/atom/latest/total.svg?maxAge=2592000)](https://github.com/SIRLab/VSS-SDK)
 
 
