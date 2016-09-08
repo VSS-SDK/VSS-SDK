@@ -132,5 +132,4 @@ Configurando nas Distros
 [glut]: https://www.opengl.org/resources/libraries/glut/
 [bullet]: http://bulletphysics.org/wordpress/
 
-
 [badges]: http://shields.io/
