@@ -98,6 +98,9 @@ Dependências
 | [Bullet Physics][bullet]                  | Biblioteca de física                                   |
 
 
+Configurando nas Distros
+------------------------
+
 [![badge](https://img.shields.io/badge/Ubuntu-16.04-brightgreen.svg)][badges]
 [![badge](https://img.shields.io/badge/Ubuntu-14.04-brightgreen.svg)][badges]
 [![badge](https://img.shields.io/badge/Debian-8.2-brightgreen.svg)][badges]
