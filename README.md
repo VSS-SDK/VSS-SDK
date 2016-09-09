@@ -1,11 +1,6 @@
 VSS-SDK 
 =======
-[![badge](https://img.shields.io/badge/Ubuntu-16.04-brightgreen.svg)][badges]
-[![badge](https://img.shields.io/badge/Ubuntu-14.04-brightgreen.svg)][badges]
-[![badge](https://img.shields.io/badge/Debian-8.2-brightgreen.svg)][badges]
-[![badge](https://img.shields.io/badge/Debian-8.5-yellow.svg)][badges]
-[![badge](https://img.shields.io/badge/Fedora-24-red.svg)][badges]
-[![badge](https://img.shields.io/badge/Mint-18-red.svg)][badges]
+[![badge](https://img.shields.io/badge/Release-1.0.2-blue.svg)][badges]
 
 
 VSS-SDK é *Suite Development Kit* que auxília na construção de um time de futebol de robôs para a categoria *IEEE Very Small Size [Soccer]*, 
@@ -99,8 +94,15 @@ Dependências
 | [Glut][glut]                              | Biblioteca de utilitários OpenGL                       |
 | [Bullet Physics][bullet]                  | Biblioteca de física                                   |
 
+Instalando no SOs
+-----------------
 
-
+[![badge](https://img.shields.io/badge/Ubuntu-16.04-brightgreen.svg)][badges]
+[![badge](https://img.shields.io/badge/Ubuntu-14.04-brightgreen.svg)][badges]
+[![badge](https://img.shields.io/badge/Debian-8.2-brightgreen.svg)][badges]
+[![badge](https://img.shields.io/badge/Debian-8.5-yellow.svg)][badges]
+[![badge](https://img.shields.io/badge/Fedora-24-red.svg)][badges]
+[![badge](https://img.shields.io/badge/Mint-18-red.svg)][badges]
 
 [vision]: https://github.com/SIRLab/VSS-Vision
 [simulator]: https://github.com/SIRLab/VSS-Simulator
