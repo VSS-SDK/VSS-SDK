@@ -97,6 +97,8 @@ UPDATE_REPOSITORIES () {
     make proto
     make
     cd ..
+
+    git pull
 }
 
 EXIT_MESSAGE () {
