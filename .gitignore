@@ -33,3 +33,8 @@
 
 # Submodules
 *opencv*
+VSS-Joystick/*
+VSS-SampleStrategy/*
+VSS-Simulator/*
+VSS-Viewer/*
+VSS-Vision/*
