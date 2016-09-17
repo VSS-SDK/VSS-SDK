@@ -3,7 +3,7 @@
 [![badge](https://img.shields.io/badge/Release-1.0.4-blue.svg)][badges]
 
 
-VSS-SDK é *Suite Development Kit* que auxília na construção de um time de futebol de robôs para a categoria *IEEE Very Small Size [Soccer]*, 
+VSS-SDK é um *Suite Development Kit* que auxília na construção de um time de futebol de robôs para a categoria *IEEE Very Small Size [Soccer]*, 
 o projeto é constituído de: 
 
 ### [VSS-Vision][vision]:
@@ -51,6 +51,8 @@ Demonstração de como utilizar nossa API e comunicar uma estratégia de jogo co
 
 Demonstração de como utilizar um controle de Playstation 3 (Dualshock 3) para comunicar-se com o VSS-Simulator ou com robôs reais;
 
+Mais informações em: http://sirlab.github.io/
+
 Instalando, Inicializando e Atualizando
 ---------------------------------------
 Se não possuir todas as depêndencias instaladas
@@ -62,7 +64,7 @@ $ sudo chmod 770 run.sh
 $ sudo chmod 770 update.sh
 ```
 
-Baixando todas as depêndencias, Inicializando todos os Repositórios, Atualizando os Repositórios
+Baixando todas as depêndencias, Inicializando e Atualizando todos os Repositórios
 ```
 $ cd VSS-SDK
 $ ./configure.sh
@@ -70,7 +72,7 @@ $ ./configure.sh
 
 Inicializando
 -------------
-Se possuir todas as depêndencias instaladas
+Se possuir todas as depêndencias instaladas, há somente a necessidade de Inicializar e Atualizar os Repositórios
 ```
 $ cd VSS-SDK
 $ ./init.sh
@@ -80,7 +82,7 @@ $ ./update.sh
 
 Atualizando
 -----------
-Atualiza os projetos para as versões mais recentes
+Atualizando os projetos para as versões mais recentes
 ```
 $ cd VSS-SDK
 $ ./update.sh
