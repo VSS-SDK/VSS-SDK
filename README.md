@@ -1,6 +1,6 @@
 # VSS-SDK
 [![Build Status](https://travis-ci.org/SIRLab/VSS-SDK.svg?branch=master)][travis]
-[![badge](https://img.shields.io/badge/Release-1.0.4-blue.svg)][badges]
+[![badge](https://img.shields.io/badge/Release-1.0.5-blue.svg)][badges]
 
 
 VSS-SDK é um *Suite Development Kit* que auxília na construção de um time de futebol de robôs para a categoria *IEEE Very Small Size [Soccer]*, 
