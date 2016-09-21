@@ -23,7 +23,7 @@ MAIN_MESSAGE () {
 
 UPDATE_REPOSITORIES () {
     echo " ";
-    echo "${PURPLE}${BOLD}Update VSS-Vision ${WHITE}${NORMAL} (Computer Vision System for IEEE Very Small Size [Soccer])";
+    echo "${PURPLE}${BOLD}Update VSS-Vision ${WHITE}${NORMAL} (A Computer Vision System made for Recognize and tracking robots and ball of competition of Robot Soccer IEEE Very Small Size)";
     echo " ";
     sleep 2;
     cd VSS-Vision
@@ -39,7 +39,7 @@ UPDATE_REPOSITORIES () {
     cd ..
 
     echo " ";
-    echo "${PURPLE}${BOLD}Update VSS-Simulator ${WHITE}${NORMAL} (Simulator for IEEE Very Small Size [Soccer])";
+    echo "${PURPLE}${BOLD}Update VSS-Simulator ${WHITE}${NORMAL} (A Simulator for the competition of Robot Soccer IEEE Very Small Size)";
     echo " ";
     sleep 2; 
     cd VSS-Simulator
@@ -54,7 +54,7 @@ UPDATE_REPOSITORIES () {
     cd ..
 
     echo " ";
-    echo "${PURPLE}${BOLD}Update VSS-Viewer ${WHITE}${NORMAL} (3D Viewer for the VSS-Vision and VSS-Simulator)";
+    echo "${PURPLE}${BOLD}Update VSS-Viewer ${WHITE}${NORMAL} (A 3D Software of visualization of states given by VSS-Simulator and VSS-Vision)";
     echo " ";
     sleep 2;
     cd VSS-Viewer
@@ -69,7 +69,8 @@ UPDATE_REPOSITORIES () {
     cd ..
 
     echo " ";
-    echo "${PURPLE}${BOLD}Update VSS-SampleStrategy ${WHITE}${NORMAL} (Sample of Strategy that works with VSS-Vision and VSS-Simulator)";
+    echo "${PURPLE}${BOLD}Update VSS-SampleStrategy ${WHITE}${NORMAL} (A Sample of Strategy that gets data from VSS-Simulator and VSS-Vision
+)";
     echo " ";
     sleep 2;
     cd VSS-SampleStrategy
@@ -84,12 +85,27 @@ UPDATE_REPOSITORIES () {
     cd ..
 
     echo " ";
-    echo "${PURPLE}${BOLD}Update VSS-Joystick ${WHITE}${NORMAL} (Sample of how control robots on VSS-Simulator and Real Robots with a Dualshock 3 (PS3 Controller))";
+    echo "${PURPLE}${BOLD}Update VSS-Joystick ${WHITE}${NORMAL} (A simple way to send commands for robots on VSS-Simulator or real robots. You can use ANY Joystick via USB.)";
     echo " ";
     sleep 2;
     cd VSS-Joystick
     git reset --hard HEAD
     git pull https://github.com/SIRLab/VSS-Joystick.git
+    cd src/VSS-Interface
+    git pull https://github.com/SIRLab/VSS-Interface.git
+    cd ..
+    cd ..
+    make proto
+    make
+    cd ..
+
+    echo " ";
+    echo "${PURPLE}${BOLD}Update VSS-GameLogger ${WHITE}${NORMAL} (A log generator/reader of a match executed on the VSS-Vision and VSS-Simulator)";
+    echo " ";
+    sleep 2;
+    cd VSS-GameLogger
+    git reset --hard HEAD
+    git pull https://github.com/SIRLab/VSS-GameLogger.git
     cd src/VSS-Interface
     git pull https://github.com/SIRLab/VSS-Interface.git
     cd ..

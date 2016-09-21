@@ -13,3 +13,6 @@
 [submodule "VSS-Viewer"]
 	path = VSS-Viewer
 	url = https://github.com/SIRLab/VSS-Viewer.git
+[submodule "VSS-GameLogger"]
+	path = VSS-GameLogger
+	url = https://github.com/SIRLab/VSS-GameLogger

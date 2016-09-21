@@ -11,14 +11,14 @@ NORMAL=$(tput sgr0)
 
 CONFIGURE_REPOSITORIES () {
     echo " ";
-    echo "${PURPLE}${BOLD}Download All Projects ${WHITE}${NORMAL} (VSS-Vision, VSS-Simulator, VSS-Viewer, VSS-SampleStrategy, VSS-Joystick)";
+    echo "${PURPLE}${BOLD}Download All Projects ${WHITE}${NORMAL} (VSS-Vision, VSS-Simulator, VSS-Viewer, VSS-SampleStrategy, VSS-Joystick, VSS-GameLogger)";
     echo " ";
     sleep 2;
     git submodule init
     git submodule update
 
     echo " ";
-    echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-Vision ${WHITE}${NORMAL} (Computer Vision System for IEEE Very Small Size [Soccer])";
+    echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-Vision ${WHITE}${NORMAL} (A Computer Vision System made for Recognize and tracking robots and ball of competition of Robot Soccer IEEE Very Small Size)";
     echo " ";
     sleep 2;
     cd VSS-Vision
@@ -30,7 +30,7 @@ CONFIGURE_REPOSITORIES () {
     cd ..
 
     echo " ";
-    echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-Simulator ${WHITE}${NORMAL} (Simulator for IEEE Very Small Size [Soccer])";
+    echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-Simulator ${WHITE}${NORMAL} (A Simulator for the competition of Robot Soccer IEEE Very Small Size)";
     echo " ";
     sleep 2; 
     cd VSS-Simulator
@@ -41,7 +41,7 @@ CONFIGURE_REPOSITORIES () {
     cd ..
 
     echo " ";
-    echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-Viewer ${WHITE}${NORMAL} (3D Viewer for the VSS-Vision and VSS-Simulator)";
+    echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-Viewer ${WHITE}${NORMAL} (A 3D Software of visualization of states given by VSS-Simulator and VSS-Vision)";
     echo " ";
     sleep 2;
     cd VSS-Viewer
@@ -52,7 +52,7 @@ CONFIGURE_REPOSITORIES () {
     cd ..
 
     echo " ";
-    echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-SampleStrategy ${WHITE}${NORMAL} (Sample of Strategy that works with VSS-Vision and VSS-Simulator)";
+    echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-SampleStrategy ${WHITE}${NORMAL} (A Sample of Strategy that gets data from VSS-Simulator and VSS-Vision)";
     echo " ";
     sleep 2;
     cd VSS-SampleStrategy
@@ -63,10 +63,21 @@ CONFIGURE_REPOSITORIES () {
     cd ..
 
     echo " ";
-    echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-Joystick ${WHITE}${NORMAL} (Sample of how control robots on VSS-Simulator and Real Robots with a Dualshock 3 (PS3 Controller))";
+    echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-Joystick ${WHITE}${NORMAL} (A simple way to send commands for robots on VSS-Simulator or real robots. You can use ANY Joystick via USB)";
     echo " ";
     sleep 2;
     cd VSS-Joystick
+    git submodule init
+    git submodule update
+    make proto
+    make
+    cd ..
+
+    echo " ";
+    echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-GameLogger ${WHITE}${NORMAL} (A log generator/reader of a match executed on the VSS-Vision and VSS-Simulator)";
+    echo " ";
+    sleep 2;
+    cd VSS-GameLogger
     git submodule init
     git submodule update
     make proto
