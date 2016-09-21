@@ -2,7 +2,7 @@ VSS-GameLogger
 ==============
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)][gpl3]
 [![Build Status](https://travis-ci.org/SIRLab/VSS-GameLogger.svg?branch=master)][travis]
-[![Link: Youtube](https://img.shields.io/badge/Link-Youtube-red.svg)][youtube]
+
 
 O VSS-GameLogger é uma das partes de um framework que está sendo desenvolvido para a categoria de futebol de robôs [IEEE Very Small Size Soccer (VSSS)][vss], que consiste em:
 
