@@ -48,8 +48,15 @@ Demonstração de como utilizar nossa API e comunicar uma estratégia de jogo co
 [![Link: Youtube](https://img.shields.io/badge/Link-Youtube-red.svg)][joystick-youtube]
 [![badge](https://img.shields.io/badge/contributors-1-blue.svg)][joystick-con]
 
-
 Demonstração de como utilizar um controle de Playstation 3 (Dualshock 3) para comunicar-se com o VSS-Simulator ou com robôs reais;
+
+### [VSS-GameLogger][gamelogger]:
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)][gpl3]
+[![Build Status](https://travis-ci.org/SIRLab/VSS-GameLogger.svg?branch=master)][gamelogger-travis]
+[![badge](https://img.shields.io/badge/contributors-2-blue.svg)][gamelogger-con]
+
+A log generator/reader of a match executed on the VSS-Vision and VSS-Simulator.
+
 
 Mais informações em: http://sirlab.github.io/
 
@@ -178,12 +185,14 @@ Configurando nas Distros
 [viewer-travis]: https://travis-ci.org/SIRLab/VSS-Viewer
 [sample-travis]: https://travis-ci.org/SIRLab/VSS-SampleStrategy
 [joystick-travis]: https://travis-ci.org/SIRLab/VSS-Joystick
+[gamelogger-travis]: https://travis-ci.org/SIRLab/VSS-GameLogger
 
 [vision-con]: https://github.com/SIRLab/VSS-Vision/graphs/contributors
 [simulator-con]: https://github.com/SIRLab/VSS-Simulator/graphs/contributors
 [viewer-con]: https://github.com/SIRLab/VSS-Viewer/graphs/contributors
 [sample-con]: https://github.com/SIRLab/VSS-SampleStrategy/graphs/contributors
 [joystick-con]: https://github.com/SIRLab/VSS-Joystick/graphs/contributors
+[gamelogger-con]: https://github.com/SIRLab/VSS-GameLogger/graphs/contributors
 
 [vision-youtube]: https://www.youtube.com/watch?v=LnWzAgE9Oqs
 [simulator-youtube]: https://www.youtube.com/watch?v=PZ5toHCb7KY
