@@ -154,6 +154,7 @@ Configurando nas Distros
 [viewer]: https://github.com/SIRLab/VSS-Viewer
 [sample]: https://github.com/SIRLab/VSS-SampleStrategy
 [joystick]: https://github.com/SIRLab/VSS-Joystick
+[gamelogger]: https://github.com/SIRLab/VSS-GameLogger
 [manual]: https://github.com/SIRLab/VSS-SDK/blob/master/MANUAL.md
 
 [pkg-config]: https://github.com/pkgconf/pkgconf
