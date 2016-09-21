@@ -1,0 +1,3 @@
+[submodule "src/VSS-Interface"]
+	path = src/VSS-Interface
+	url = https://github.com/SIRLab/VSS-Interface
