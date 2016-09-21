@@ -15,7 +15,6 @@
 
 # Fortran module files
 *.mod
-*.smod
 
 # Compiled Static libraries
 *.lai
@@ -23,7 +22,14 @@
 *.a
 *.lib
 
+# Junk Files
+.vscode/.browse.VC*
+*.pb.cc
+*.pb.h
+
 # Executables
 *.exe
 *.out
 *.app
+VSS-GameLogger
+VSS-GameLogger-Debug
