@@ -33,16 +33,6 @@ addons:
       - libzmq3
       - libzmq3-dev
       - libboost-all-dev
-<<<<<<< HEAD
       
 script:
-
   - ./configure.sh
-=======
-      - libompl-dev
-      
-script:
-
-  - make proto
-  - make
->>>>>>> de5c821e0dd54941a80726b8c60cef3cca314f6c
