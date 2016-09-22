@@ -16,3 +16,6 @@
 [submodule "VSS-GameLogger"]
 	path = VSS-GameLogger
 	url = https://github.com/SIRLab/VSS-GameLogger
+[submodule "src/VSS-Interface"]
+	path = src/VSS-Interface
+	url = https://github.com/SIRLab/VSS-Interface

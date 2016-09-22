@@ -15,7 +15,10 @@
 
 # Fortran module files
 *.mod
+<<<<<<< HEAD
 *.smod
+=======
+>>>>>>> de5c821e0dd54941a80726b8c60cef3cca314f6c
 
 # Compiled Static libraries
 *.lai
@@ -23,13 +26,21 @@
 *.a
 *.lib
 
+<<<<<<< HEAD
 # Visual Code Junk
 *.vscode
+=======
+# Junk Files
+.vscode/.browse.VC*
+*.pb.cc
+*.pb.h
+>>>>>>> de5c821e0dd54941a80726b8c60cef3cca314f6c
 
 # Executables
 *.exe
 *.out
 *.app
+<<<<<<< HEAD
 
 # Submodules
 *opencv*
@@ -39,3 +50,7 @@ VSS-Simulator/*
 VSS-Viewer/*
 VSS-Vision/*
 VSS-GameLogger/*
+=======
+VSS-GameLogger
+VSS-GameLogger-Debug
+>>>>>>> de5c821e0dd54941a80726b8c60cef3cca314f6c
