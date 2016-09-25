@@ -1,6 +1,7 @@
 # VSS-SDK
+[![badge](https://img.shields.io/badge/Release-1.0.8-blue.svg)][badges]
 [![Build Status](https://travis-ci.org/SIRLab/VSS-SDK.svg?branch=master)][travis]
-[![badge](https://img.shields.io/badge/Release-1.0.7-blue.svg)][badges]
+[![Link: Youtube](https://img.shields.io/badge/Link-Youtube-red.svg)][youtube]
 
 
 VSS-SDK é um *Suite Development Kit* que auxília na construção de um time de futebol de robôs para a categoria *IEEE Very Small Size [Soccer]*, 
@@ -46,16 +47,16 @@ Demonstração de como utilizar nossa API e comunicar uma estratégia de jogo co
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)][gpl3]
 [![Build Status](https://travis-ci.org/SIRLab/VSS-Joystick.svg?branch=master)][joystick-travis]
 [![Link: Youtube](https://img.shields.io/badge/Link-Youtube-red.svg)][joystick-youtube]
-[![badge](https://img.shields.io/badge/contributors-1-blue.svg)][joystick-con]
+[![badge](https://img.shields.io/badge/contributors-2-blue.svg)][joystick-con]
 
 Demonstração de como utilizar um controle de Playstation 3 (Dualshock 3) para comunicar-se com o VSS-Simulator ou com robôs reais;
 
 ### [VSS-GameLogger][gamelogger]:
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)][gpl3]
 [![Build Status](https://travis-ci.org/SIRLab/VSS-GameLogger.svg?branch=master)][gamelogger-travis]
-[![badge](https://img.shields.io/badge/contributors-2-blue.svg)][gamelogger-con]
+[![badge](https://img.shields.io/badge/contributors-1-blue.svg)][gamelogger-con]
 
-A log generator/reader of a match executed on the VSS-Vision and VSS-Simulator.
+Gerador e leitur de Logs de uma partida executada no VSS-Vision ou VSS-Simulator;
 
 
 Mais informações em: http://sirlab.github.io/
@@ -178,6 +179,7 @@ Configurando nas Distros
 
 [badges]: http://shields.io/
 [travis]: https://travis-ci.org/SIRLab/VSS-SDK
+[youtube]: https://www.youtube.com/watch?v=2Yo8s7w7rTE
 [youtube1]: https://www.youtube.com/watch?v=kY607fLqeB0
 [youtube2]: https://www.youtube.com/watch?v=UQeVL_I5NIw
 
