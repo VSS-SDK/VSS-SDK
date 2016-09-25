@@ -4,8 +4,10 @@
 [![Link: Youtube](https://img.shields.io/badge/Link-Youtube-red.svg)][youtube]
 
 
-VSS-SDK é um *Suite Development Kit* que auxília na construção de um time de futebol de robôs para a categoria *IEEE Very Small Size [Soccer]*, 
-o projeto é constituído de: 
+VSS-SDK é um *Suite Development Kit* que auxília na construção de um time de futebol de robôs para a categoria *IEEE Very Small Size [Soccer]*,
+o projeto foi construído em cima do SO Linux e além de ser posśivel utiliza-lo praticamente em qualquer distro o mesmo pode ser executado paralelamente em diversos computadores via
+rede. O projeto é constituído de:
+
 
 ### [VSS-Vision][vision]:
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)][gpl3]
