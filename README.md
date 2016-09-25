@@ -23,7 +23,9 @@ Sistema de Visão Computacional feito com base na categoria IEEE Very Small Size
 [![Link: Youtube](https://img.shields.io/badge/Link-Youtube-red.svg)][simulator-youtube]
 [![badge](https://img.shields.io/badge/contributors-2-blue.svg)][simulator-con]
 
-Simulador constituído de um campo e de 6 robôs nos padrões da categoria IEEE Very Small Size [Soccer];
+Simulador constituído de um campo e de 6 robôs nos padrões da categoria IEEE Very Small Size [Soccer]. É posśivel realizar jogos gerando um relatório no final e acelerar os mesmos em até 25 vezes;
+
+![screenshot 2](https://raw.githubusercontent.com/SIRLab/VSS-Simulator/master/images/top.png)
 
 ### [VSS-Viewer][viewer]:
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)][gpl3]
@@ -33,7 +35,8 @@ Simulador constituído de um campo e de 6 robôs nos padrões da categoria IEEE 
 
 Visualizador de estados em 3D que incorpora os ambientes gerados pelos projetos VSS-Vision e VSS-Simulator;
 
-![screenshot 2](https://raw.githubusercontent.com/SIRLab/VSS-Viewer/master/images/top.png)
+![screenshot 3](https://raw.githubusercontent.com/SIRLab/VSS-Viewer/master/images/top.png)
+![screenshot 4](https://raw.githubusercontent.com/SIRLab/VSS-Viewer/master/images/top2.png)
 
 ### [VSS-SampleStrategy][sample]:
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)][gpl3]
@@ -43,6 +46,8 @@ Visualizador de estados em 3D que incorpora os ambientes gerados pelos projetos 
 
 Demonstração de como utilizar nossa API e comunicar uma estratégia de jogo com o VSS-Vision e VSS-Simulator, além de como enviar comandos para robôs reais;
 
+![screenshot 5](https://raw.githubusercontent.com/SIRLab/VSS-SampleStrategy/master/images/top.png)
+
 ### [VSS-Joystick][joystick]:
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)][gpl3]
 [![Build Status](https://travis-ci.org/SIRLab/VSS-Joystick.svg?branch=master)][joystick-travis]
@@ -50,6 +55,8 @@ Demonstração de como utilizar nossa API e comunicar uma estratégia de jogo co
 [![badge](https://img.shields.io/badge/contributors-2-blue.svg)][joystick-con]
 
 Demonstração de como utilizar um controle de Playstation 3 (Dualshock 3) para comunicar-se com o VSS-Simulator ou com robôs reais;
+
+![screenshot 6](https://raw.githubusercontent.com/SIRLab/VSS-Joystick/master/images/top.png)
 
 ### [VSS-GameLogger][gamelogger]:
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)][gpl3]
