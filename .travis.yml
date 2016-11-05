@@ -36,3 +36,6 @@ addons:
       
 script:
   - ./configure.sh
+
+notifications:
+  slack: sirlab:MjTrgHctmtm0EJF75ISsZ1vB
