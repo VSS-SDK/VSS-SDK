@@ -1,5 +1,5 @@
 # VSS-SDK
-[![badge](https://img.shields.io/badge/Release-1.0.8-blue.svg)][badges]
+[![badge](https://img.shields.io/github/tag/SIRLab/VSS-SDK.svg)][badges]
 [![Build Status](https://travis-ci.org/SIRLab/VSS-SDK.svg?branch=master)][travis]
 [![Link: Youtube](https://img.shields.io/badge/Link-Youtube-red.svg)][youtube]
 
