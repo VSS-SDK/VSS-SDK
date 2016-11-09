@@ -1,4 +1,11 @@
 #!/bin/bash
+#
+# This file is part of the VSS-SDK project.
+#
+# This Source Code Form is subject to the terms of the GNU GENERAL PUBLIC LICENSE,
+# v. 3.0. If a copy of the GPL was not distributed with this
+# file, You can obtain one at http://www.gnu.org/licenses/gpl-3.0/.
+#
 
 WHITE=$(tput setaf 15)
 RED=$(tput setaf 9)
@@ -16,6 +23,8 @@ STATUS_SIMULATOR=0
 STATUS_YELLOW_TEAM=0
 STATUS_BLUE_TEAM=0
 STATUS_DEBUG=0
+STATUS_FAST=0
+STATUS_DEVELOP=0
 YELLOW_NAME=0
 BLUE_NAME=0
 EXECUTION_OK=1
@@ -120,6 +129,18 @@ CHECK_DEBUG () {
     fi
 }
 
+CHECK_FAST () {
+    if [[ "$1" == "fast" ]]; then
+        STATUS_FAST=1
+    fi
+}
+
+CHECK_DEVELOP () {
+    if [[ "$1" == "develop" ]]; then
+        STATUS_DEVELOP=1
+    fi
+}
+
 CHECK_YELLOW () {
     OUTPUT_YELLOW=$(echo "$1" | grep 'yellow=')
     if [[ "$OUTPUT_YELLOW" != "" ]]; then
@@ -160,7 +181,7 @@ if [ $# -eq 0 ]; then
 else
     echo "${WHITE}${BOLD} - EXECUCAO - ${NORMAL}";
 
-    # Check all inputs
+    # Lê a entrada em busca de flags definidas
     for i in $*; do 
         CHECK_VISION $i
         CHECK_VIEWER $i
@@ -169,9 +190,11 @@ else
         CHECK_YELLOW $i
         CHECK_BLUE $i
         CHECK_DEBUG $i
+        CHECK_FAST $i
+        CHECK_DEVELOP $i
     done
     
-    # Check invalid combinations
+    # Verifica combinações invalidas
     if [ $STATUS_VISION == 1 ]; then
         if [ $STATUS_SIMULATOR == 1 ]; then
             echo " ";
@@ -194,10 +217,33 @@ else
         STATUS_DEBUG=0
     fi
 
+    if [[ $STATUS_FAST == 1 && $STATUS_SIM == 0 ]]; then
+        echo " ";
+        echo "${YELLOW}${BOLD}[ERRO DE COMBINACAO]: ${WHITE}Para ativar o fast é necessário ativar o sim."
+        STATUS_FAST=0
+    fi
+
+    if [[ $STATUS_DEVELOP == 1 && $STATUS_SIM == 0 ]]; then
+        echo " ";
+        echo "${YELLOW}${BOLD}[ERRO DE COMBINACAO]: ${WHITE}Para ativar o develop é necessário ativar o sim."
+        STATUS_DEVELOP=0
+    fi
+
+    if [[ $STATUS_FAST == 1 && $STATUS_VIEWER == 1 ]]; then
+        echo " ";
+        echo "${YELLOW}${BOLD}[ALERTA DE COMBINACAO]: ${WHITE}Para obter um resultado mais fiel, quando fast estiver ativo, desative viewer."
+    fi
+
+    # Se as configurações estão OK
     if [ $EXECUTION_OK == 1 ]; then
         if [ $STATUS_DEBUG == 1 ]; then
             echo " ";
             echo "${PURPLE}${BOLD}[MODO DE DEBUG]: ${WHITE}Ligado${NORMAL}"
+        fi
+
+        if [ $STATUS_FAST == 1 ]; then
+            echo " ";
+            echo "${PURPLE}${BOLD}[MODO ACELERADO]: ${WHITE}Ligado${NORMAL}"
         fi
 
         # Open VSS-Vision
@@ -214,7 +260,19 @@ else
             echo " ";
             echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}VSS-Simulator${NORMAL}"
             cd VSS-Simulator
-            make run &
+            if [ $STATUS_FAST == 1 ]; then
+                if [ $STATUS_DEVELOP == 1 ]; then
+                    ./VSS-Simulator -f -d &
+                else
+                    ./VSS-Simulator -f &
+                fi
+            else
+                if [ $STATUS_DEVELOP == 1 ]; then
+                    ./VSS-Simulator -d &
+                else
+                    ./VSS-Simulator &
+                fi
+            fi
             cd ..
         fi
 
