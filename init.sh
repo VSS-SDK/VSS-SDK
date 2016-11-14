@@ -58,16 +58,16 @@ CONFIGURE_REPOSITORIES () {
     make
     cd ..
 
-    echo " ";
-    echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-SampleStrategy ${WHITE}${NORMAL} (A Sample of Strategy that gets data from VSS-Simulator and VSS-Vision)";
-    echo " ";
-    sleep 2;
-    cd VSS-SampleStrategy
-    git submodule init
-    git submodule update
-    make proto
-    make
-    cd ..
+    #echo " ";
+    #echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-SampleStrategy ${WHITE}${NORMAL} (A Sample of Strategy that gets data from VSS-Simulator and VSS-Vision)";
+    #echo " ";
+    #sleep 2;
+    #cd VSS-SampleStrategy
+    #git submodule init
+    #git submodule update
+    #make proto
+    #make
+    #cd ..
 
     echo " ";
     echo "${PURPLE}${BOLD}Update, Configure and Compile VSS-Joystick ${WHITE}${NORMAL} (A simple way to send commands for robots on VSS-Simulator or real robots. You can use ANY Joystick via USB)";
