@@ -66,13 +66,15 @@ CONFIGURE_REPOSITORIES () {
     cd VSS-SampleCpp
     git submodule init
     git submodule update
+    make proto
+    make
     cd ..
     cd VSS-SampleRust
     git submodule init
     git submodule update
+    #make proto
+    cargo build
     cd ..
-    make proto
-    make
     cd ..
 
     echo " ";
