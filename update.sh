@@ -108,7 +108,7 @@ UPDATE_SAMPLE () {
     git pull https://github.com/SIRLab/VSS-Interface.git
     cd ..
     cd ..
-    #make proto
+    make proto
     cargo build
     cd ..
     cd ..
