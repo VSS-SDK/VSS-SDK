@@ -87,18 +87,30 @@ UPDATE_VIEWER() {
 # Atualiza o VSS-SampleStrategy
 UPDATE_SAMPLE () {
     echo " ";
-    echo "${PURPLE}${BOLD}Update VSS-SampleStrategy ${WHITE}${NORMAL} (A Sample of Strategy that gets data from VSS-Simulator and VSS-Vision)";
+    echo "${PURPLE}${BOLD}Update VSS-Samples ${WHITE}${NORMAL} (Samples of code written in various languages which communicates with the VSS-SDK)";
     echo " ";
     sleep 2;
-    cd VSS-SampleStrategy
+    cd VSS-Samples
+    cd VSS-SampleCpp
     git reset --hard HEAD
-    git pull https://github.com/SIRLab/VSS-SampleStrategy.git
+    git pull https://github.com/SIRLab/VSS-SampleCpp.git
     cd src/VSS-Interface
     git pull https://github.com/SIRLab/VSS-Interface.git
     cd ..
     cd ..
     make proto
     make
+    cd ..
+    cd VSS-SampleRust
+    git reset --hard HEAD
+    git pull https://github.com/SIRLab/VSS-SampleRust.git
+    cd src/VSS-Interface
+    git pull https://github.com/SIRLab/VSS-Interface.git
+    cd ..
+    cd ..
+    make proto
+    make
+    cd ..
     cd ..
 }
 

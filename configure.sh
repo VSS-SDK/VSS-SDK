@@ -70,9 +70,11 @@ INSTALL_UBUNTU_16_04 () {
     echo " ${BLUE}  libboost-all-dev ${WHITE}(Peer-reviewed portable C++ source libraries)"
     echo " ${BLUE}  freeglut3 freeglut3-dev ${WHITE}(OpenGL Utility Toolkit (GLUT) library)"
     echo " ${BLUE}  libbullet-dev ${WHITE}(Physics Library)"
+    echo " ${BLUE}  curl ${WHITE}(Transfer of data)"
+    echo " ${BLUE}  rustc cargo${WHITE}(Rust compiler and package manager)"
     echo " ";
     sleep 5;
-    sudo apt-get install g++ cmake git uvcdynctrl libzmqpp3 libzmqpp-dev protobuf-compiler libprotobuf-dev qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev doxygen graphviz graphviz-dev libboost-all-dev freeglut3 freeglut3-dev libbullet-dev
+    sudo apt-get install g++ cmake git uvcdynctrl libzmqpp3 libzmqpp-dev protobuf-compiler libprotobuf-dev qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev doxygen graphviz graphviz-dev libboost-all-dev freeglut3 freeglut3-dev libbullet-dev rustc cargo curl
 
     echo " ";
     echo "${BLUE}${BOLD}Install from Github: OpenCV${WHITE}${NORMAL} (Library of real-time computer vision)";
@@ -118,9 +120,10 @@ INSTALL_UBUNTU_14_04 () {
     echo " ${BLUE}  libboost-all-dev ${WHITE}(Peer-reviewed portable C++ source libraries)"
     echo " ${BLUE}  freeglut3 freeglut3-dev ${WHITE}(OpenGL Utility Toolkit (GLUT) library)"
     echo " ${BLUE}  libbullet-dev ${WHITE}(Physics Library)"
+    echo " ${BLUE}  curl ${WHITE}(Transfer of data)"
     echo " ";
     sleep 5;
-    sudo apt-get install g++ cmake git uvcdynctrl libzmq3 libzmq3-dev protobuf-compiler libprotobuf-dev qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev doxygen graphviz graphviz graphviz-dev libboost-all-dev freeglut3 freeglut3-dev libbullet-dev
+    sudo apt-get install g++ cmake git uvcdynctrl libzmq3 libzmq3-dev protobuf-compiler libprotobuf-dev qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev doxygen graphviz graphviz graphviz-dev libboost-all-dev freeglut3 freeglut3-dev libbullet-dev curl
 
     echo " ";
     echo "${BLUE}${BOLD}Install from Github: OpenCV${WHITE}${NORMAL} (Library of real-time computer vision)";
@@ -136,6 +139,14 @@ INSTALL_UBUNTU_14_04 () {
     cd ..
     cd ..
     echo " ";
+
+    echo " ";
+    echo "${BLUE}${BOLD}Install from curl: Rustc${WHITE}${NORMAL} (Rust compiler and package manager)";
+    echo " ";
+    sleep 3;
+    curl -sSf https://static.rust-lang.org/rustup.sh | sh
+    cargo install protobuf
+    
     INSTALLED=1
 }
 
@@ -166,9 +177,10 @@ INSTALL_DEBIAN_8_2 () {
     echo " ${BLUE}  libboost-all-dev ${WHITE}(Peer-reviewed portable C++ source libraries)"
     echo " ${BLUE}  freeglut3 freeglut3-dev ${WHITE}(OpenGL Utility Toolkit (GLUT) library)"
     echo " ${BLUE}  libbullet-dev ${WHITE}(Physics Library)"
+    echo " ${BLUE}  curl ${WHITE}(Transfer of data)"
     echo " ";
     sleep 5;
-    sudo apt-get install g++ cmake git uvcdynctrl libzmq3 libzmq3-dev protobuf-compiler libprotobuf-dev qt5-default qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev doxygen graphviz graphviz graphviz-dev libboost-all-dev freeglut3 freeglut3-dev libbullet-dev
+    sudo apt-get install g++ cmake git uvcdynctrl libzmq3 libzmq3-dev protobuf-compiler libprotobuf-dev qt5-default qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev doxygen graphviz graphviz graphviz-dev libboost-all-dev freeglut3 freeglut3-dev libbullet-dev curl
 
     echo " ";
     echo "${BLUE}${BOLD}Install from Github: OpenCV${WHITE}${NORMAL} (Library of real-time computer vision)";
@@ -184,6 +196,14 @@ INSTALL_DEBIAN_8_2 () {
     cd ..
     cd ..
     echo " ";
+
+    echo " ";
+    echo "${BLUE}${BOLD}Install from curl: Rustc${WHITE}${NORMAL} (Rust compiler and package manager)";
+    echo " ";
+    sleep 3;
+    curl -sSf https://static.rust-lang.org/rustup.sh | sh
+    cargo install protobuf
+
     INSTALLED=1
 }
 
@@ -214,9 +234,10 @@ INSTALL_DEBIAN_8_5 () {
     echo " ${BLUE}  libboost-all-dev ${WHITE}(Peer-reviewed portable C++ source libraries)"
     echo " ${BLUE}  freeglut3 freeglut3-dev ${WHITE}(OpenGL Utility Toolkit (GLUT) library)"
     echo " ${BLUE}  libbullet-dev ${WHITE}(Physics Library)"
+    echo " ${BLUE}  curl ${WHITE}(Transfer of data)"
     echo " ";
     sleep 5;
-    sudo apt-get install g++ cmake git uvcdynctrl libzmq3 libzmq3-dev protobuf-compiler libprotobuf-dev qt5-default qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev doxygen graphviz graphviz graphviz-dev libboost-all-dev freeglut3 freeglut3-dev libbullet-dev
+    sudo apt-get install g++ cmake git uvcdynctrl libzmq3 libzmq3-dev protobuf-compiler libprotobuf-dev qt5-default qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev doxygen graphviz graphviz graphviz-dev libboost-all-dev freeglut3 freeglut3-dev libbullet-dev curl
 
     echo " ";
     echo "${BLUE}${BOLD}Install from Github: OpenCV${WHITE}${NORMAL} (Library of real-time computer vision)";
@@ -232,6 +253,14 @@ INSTALL_DEBIAN_8_5 () {
     cd ..
     cd ..
     echo " ";
+
+    echo " ";
+    echo "${BLUE}${BOLD}Install from curl: Rustc${WHITE}${NORMAL} (Rust compiler and package manager)";
+    echo " ";
+    sleep 3;
+    curl -sSf https://static.rust-lang.org/rustup.sh | sh
+    cargo install protobuf
+
     INSTALLED=1
 }
 

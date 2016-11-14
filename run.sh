@@ -141,23 +141,23 @@ CHECK_DEVELOP () {
     fi
 }
 
-#CHECK_YELLOW () {
-#    OUTPUT_YELLOW=$(echo "$1" | grep 'yellow=')
-#    if [[ "$OUTPUT_YELLOW" != "" ]]; then
-#        STATUS_YELLOW_TEAM=1
-#        YELLOW_NAME=$OUTPUT_YELLOW
-#        YELLOW_NAME=$(echo $YELLOW_NAME | cut -d"=" -f 2)
-#    fi
-#}
+CHECK_YELLOW () {
+    OUTPUT_YELLOW=$(echo "$1" | grep 'yellow=')
+    if [[ "$OUTPUT_YELLOW" != "" ]]; then
+        STATUS_YELLOW_TEAM=1
+        YELLOW_NAME=$OUTPUT_YELLOW
+        YELLOW_NAME=$(echo $YELLOW_NAME | cut -d"=" -f 2)
+    fi
+}
 
-#CHECK_BLUE () {
-#    OUTPUT_BLUE=$(echo "$1" | grep 'blue=')
-#    if [[ "$OUTPUT_BLUE" != "" ]]; then
-#        STATUS_BLUE_TEAM=1
-#        BLUE_NAME=$OUTPUT_BLUE
-#        BLUE_NAME=$(echo $BLUE_NAME | cut -d"=" -f 2)
-#    fi
-#}
+CHECK_BLUE () {
+    OUTPUT_BLUE=$(echo "$1" | grep 'blue=')
+    if [[ "$OUTPUT_BLUE" != "" ]]; then
+        STATUS_BLUE_TEAM=1
+        BLUE_NAME=$OUTPUT_BLUE
+        BLUE_NAME=$(echo $BLUE_NAME | cut -d"=" -f 2)
+    fi
+}
 
 intexit() {
     # Kill all subprocesses (all processes in the current process group)
@@ -187,8 +187,8 @@ else
         CHECK_VIEWER $i
         CHECK_JOYSTICK $i
         CHECK_SIMULATOR $i
-        #CHECK_YELLOW $i
-        #CHECK_BLUE $i
+        CHECK_YELLOW $i
+        CHECK_BLUE $i
         CHECK_DEBUG $i
         CHECK_FAST $i
         CHECK_DEVELOP $i
@@ -301,78 +301,54 @@ else
         fi
 
         # Open Yellow Strategy
-        #if [ $STATUS_YELLOW_TEAM == 1 ]; then
-        #    echo " ";
-        #    echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}Yellow Strategy${NORMAL}"
-        #    if [[ "$YELLOW_NAME" != "joy" ]]; then
-        #
-        #        if [ $STATUS_DEBUG == 1 ]; then
-        #            if [[ "$YELLOW_NAME" != "sample" ]]; then
-        #                cd Strategies
-        #                ./$YELLOW_NAME -c yellow -d &
-        #                cd ..
-        #            else
-        #                cd VSS-SampleStrategy
-        #                ./VSS-SampleStrategy -c yellow -d &
-        #                cd ..
-        #            fi
-        #        else
-        #            if [[ "$YELLOW_NAME" != "sample" ]]; then
-        #                cd Strategies
-        #                ./$YELLOW_NAME -c yellow &
-        #                cd ..
-        #            else
-        #                cd VSS-SampleStrategy
-        #                ./VSS-SampleStrategy -c yellow &
-        #                cd ..
-        #            fi
-        #        fi
-        #        
-        #    else    # JOYSTICK
-        #        echo " ";
-        #        echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}VSS-Joystick How Yellow Strategy${NORMAL}"
-        #        cd VSS-Joystick
-        #        make run &
-        #        cd ..
-        #    fi
-        #fi
+        if [ $STATUS_YELLOW_TEAM == 1 ]; then
+            echo " ";
+            echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}Yellow Strategy${NORMAL}"
+            if [[ "$YELLOW_NAME" != "joy" ]]; then
+        
+                if [ $STATUS_DEBUG == 1 ]; then
+                    cd VSS-Samples/VSS-SampleCpp
+                    ./VSS-SampleCpp -c yellow -d &
+                    cd ..
+                else
+                    cd VSS-Samples/VSS-SampleCpp
+                    ./VSS-SampleCpp -c yellow &
+                    cd ..
+                fi
+                
+            else    # JOYSTICK
+                echo " ";
+                echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}VSS-Joystick How Yellow Strategy${NORMAL}"
+                cd VSS-Joystick
+                make run &
+                cd ..
+            fi
+        fi
 
         # Open Blue Strategy
-        #if [ $STATUS_BLUE_TEAM == 1 ]; then
-        #    echo " ";
-        #    echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}Blue Strategy${NORMAL}"
-        #    if [[ "$BLUE_NAME" != "joy" ]]; then
-        #        
-        #        if [ $STATUS_DEBUG == 1 ]; then
-        #            if [[ "$BLUE_NAME" != "sample" ]]; then
-        #                cd Strategies
-        #                ./$BLUE_NAME -c blue -d &
-        #                cd ..
-        #            else
-        #                cd VSS-SampleStrategy
-        #                ./VSS-SampleStrategy -c blue -d &
-        #                cd ..
-        #            fi
-        #        else
-        #            if [[ "$BLUE_NAME" != "sample" ]]; then
-        #                cd Strategies
-        #                ./$BLUE_NAME -c blue &
-        #                cd ..
-        #            else
-        #                cd VSS-SampleStrategy
-        #                ./VSS-SampleStrategy -c blue &
-        #                cd ..
-        #            fi
-        #        fi
-        #
-        #    else
-        #        echo " ";
-        #        echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}VSS-Joystick How Blue Strategy${NORMAL}"
-        #        cd VSS-Joystick
-        #        make run &
-        #        cd ..
-        #    fi
-        #fi
+        if [ $STATUS_BLUE_TEAM == 1 ]; then
+            echo " ";
+            echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}Blue Strategy${NORMAL}"
+            if [[ "$BLUE_NAME" != "joy" ]]; then
+                
+                if [ $STATUS_DEBUG == 1 ]; then
+                    cd VSS-Samples/VSS-SampleCpp
+                    ./VSS-SampleCpp -c blue -d &
+                    cd ..
+                else
+                    cd VSS-Samples/VSS-SampleCpp
+                    ./VSS-SampleCpp -c blue &
+                    cd ..
+                fi
+        
+            else
+                echo " ";
+                echo "${GREEN}${BOLD}[EXECUTANDO]: ${WHITE}VSS-Joystick How Blue Strategy${NORMAL}"
+                cd VSS-Joystick
+                make run &
+                cd ..
+            fi
+        fi
 
         wait;
     else

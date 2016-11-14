@@ -16,3 +16,9 @@
 [submodule "src/VSS-Interface"]
 	path = src/VSS-Interface
 	url = https://github.com/SIRLab/VSS-Interface
+[submodule "VSS-Samples/VSS-SampleRust"]
+	path = VSS-Samples/VSS-SampleRust
+	url = https://github.com/SIRLab/VSS-SampleRust.git
+[submodule "VSS-Samples/VSS-SampleCpp"]
+	path = VSS-Samples/VSS-SampleCpp
+	url = https://github.com/SIRLab/VSS-SampleCpp
