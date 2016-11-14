@@ -12,8 +12,7 @@ rede. O projeto é constituído de:
 ### [VSS-Vision][vision]:
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)][gpl3]
 [![Build Status](https://travis-ci.org/SIRLab/VSS-Vision.svg?branch=master)][vision-travis]
-[![Link: Youtube](https://img.shields.io/badge/Link-Youtube-red.svg)][vision-youtube]
-[![badge](https://img.shields.io/badge/contributors-5-blue.svg)][vision-con]
+[![badge](https://img.shields.io/github/contributors/SIRLab/VSS-Vision.svg)][vision-con]
 
 Sistema de Visão Computacional feito com base na categoria IEEE Very Small Size [Soccer] que reconhece e rastreia a bola e os robôs em campo;
 
@@ -22,8 +21,7 @@ Sistema de Visão Computacional feito com base na categoria IEEE Very Small Size
 ### [VSS-Simulator][simulator]:
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)][mit]
 [![Build Status](https://travis-ci.org/SIRLab/VSS-Simulator.svg?branch=master)][simulator-travis]
-[![Link: Youtube](https://img.shields.io/badge/Link-Youtube-red.svg)][simulator-youtube]
-[![badge](https://img.shields.io/badge/contributors-2-blue.svg)][simulator-con]
+[![badge](https://img.shields.io/github/contributors/SIRLab/VSS-Simulator.svg)][simulator-con]
 
 Simulador constituído de um campo e de 6 robôs nos padrões da categoria IEEE Very Small Size [Soccer]. É posśivel realizar jogos gerando um relatório no final e acelerar os mesmos em até 25 vezes;
 
@@ -32,29 +30,35 @@ Simulador constituído de um campo e de 6 robôs nos padrões da categoria IEEE 
 ### [VSS-Viewer][viewer]:
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)][gpl3]
 [![Build Status](https://travis-ci.org/SIRLab/VSS-Viewer.svg?branch=master)][viewer-travis]
-[![Link: Youtube](https://img.shields.io/badge/Link-Youtube-red.svg)][viewer-youtube]
-[![badge](https://img.shields.io/badge/contributors-1-blue.svg)][viewer-con]
+[![badge](https://img.shields.io/github/contributors/SIRLab/VSS-Viewer.svg)][viewer-con]
 
 Visualizador de estados em 3D que incorpora os ambientes gerados pelos projetos VSS-Vision e VSS-Simulator;
 
 ![screenshot 3](https://raw.githubusercontent.com/SIRLab/VSS-Viewer/master/images/top.png)
 ![screenshot 4](https://raw.githubusercontent.com/SIRLab/VSS-Viewer/master/images/top2.png)
 
-### [VSS-SampleStrategy][sample]:
+### [VSS-SampleStrategy][samplecpp]:
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)][gpl3]
-[![Build Status](https://travis-ci.org/SIRLab/VSS-SampleStrategy.svg?branch=master)][sample-travis]
-[![Link: Youtube](https://img.shields.io/badge/Link-Youtube-red.svg)][sample-youtube]
-[![badge](https://img.shields.io/badge/contributors-1-blue.svg)][sample-con]
+[![Build Status](https://travis-ci.org/SIRLab/VSS-SampleCpp.svg?branch=master)][samplecpp-travis]
+[![badge](https://img.shields.io/github/contributors/SIRLab/VSS-SampleCpp.svg)][samplecpp-con]
 
-Demonstração de como utilizar nossa API e comunicar uma estratégia de jogo com o VSS-Vision e VSS-Simulator, além de como enviar comandos para robôs reais;
+Demonstração em C++ de como utilizar nossa API e comunicar uma estratégia de jogo com o VSS-Vision e VSS-Simulator, além de como enviar comandos para robôs reais;
+
+![screenshot 5](https://raw.githubusercontent.com/SIRLab/VSS-SampleStrategy/master/images/top.png)
+
+### [VSS-SampleStrategy][samplerust]:
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)][gpl3]
+[![Build Status](https://travis-ci.org/SIRLab/VSS-SampleRust.svg?branch=master)][samplerust-travis]
+[![badge](https://img.shields.io/github/contributors/SIRLab/VSS-SampleRust.svg)][samplerust-con]
+
+Demonstração em Rust de como utilizar nossa API e comunicar uma estratégia de jogo com o VSS-Vision e VSS-Simulator, além de como enviar comandos para robôs reais;
 
 ![screenshot 5](https://raw.githubusercontent.com/SIRLab/VSS-SampleStrategy/master/images/top.png)
 
 ### [VSS-Joystick][joystick]:
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)][gpl3]
 [![Build Status](https://travis-ci.org/SIRLab/VSS-Joystick.svg?branch=master)][joystick-travis]
-[![Link: Youtube](https://img.shields.io/badge/Link-Youtube-red.svg)][joystick-youtube]
-[![badge](https://img.shields.io/badge/contributors-2-blue.svg)][joystick-con]
+[![badge](https://img.shields.io/github/contributors/SIRLab/VSS-Joystick.svg)][joystick-con]
 
 Demonstração de como utilizar um controle de Playstation 3 (Dualshock 3) para comunicar-se com o VSS-Simulator ou com robôs reais;
 
@@ -63,12 +67,13 @@ Demonstração de como utilizar um controle de Playstation 3 (Dualshock 3) para 
 ### [VSS-GameLogger][gamelogger]:
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)][gpl3]
 [![Build Status](https://travis-ci.org/SIRLab/VSS-GameLogger.svg?branch=master)][gamelogger-travis]
-[![badge](https://img.shields.io/badge/contributors-1-blue.svg)][gamelogger-con]
+[![badge](https://img.shields.io/github/contributors/SIRLab/VSS-GameLogger.svg)][gamelogger-con]
 
 Gerador e leitur de Logs de uma partida executada no VSS-Vision ou VSS-Simulator;
 
 
-Mais informações em: http://sirlab.github.io/
+Mais informações em: http://sirlab.github.io/VSS-SDK
+
 
 Instalando, Inicializando e Atualizando
 ---------------------------------------
@@ -116,17 +121,6 @@ $ ./run.sh sim viewer or ./run.sh vision viewer ...
 
 
 
-Exportando uma Estratégia
--------------------------
-Exporta um VSS-SampleStrategy para Strategies, assim facilitando a execução.
-```
-$ cd VSS-SDK
-$ ./export.sh
-$ ./run.sh sim viewer yellow=name_of_strategy
-```
-
-
-
 Dependências
 ------------
 
@@ -147,6 +141,9 @@ Dependências
 | [Boost][boost]                            | Extensão de código para C++                            |
 | [Glut][glut]                              | Biblioteca de utilitários OpenGL                       |
 | [Bullet Physics][bullet]                  | Biblioteca de física                                   |
+| [Curl][curl]                              | Biblioteca de Transferência de Dados                   |
+| [Rustc][rustc]                            | Compilador de Rust                                     |
+| [Cargo][cargo]                            | Gerenciador de pacotes automático (Rust)               |
 
 
 Configurando nas Distros
@@ -162,7 +159,8 @@ Configurando nas Distros
 [vision]: https://github.com/SIRLab/VSS-Vision
 [simulator]: https://github.com/SIRLab/VSS-Simulator
 [viewer]: https://github.com/SIRLab/VSS-Viewer
-[sample]: https://github.com/SIRLab/VSS-SampleStrategy
+[samplecpp]: https://github.com/SIRLab/VSS-SampleCpp
+[samplecpp]: https://github.com/SIRLab/VSS-SampleRust
 [joystick]: https://github.com/SIRLab/VSS-Joystick
 [gamelogger]: https://github.com/SIRLab/VSS-GameLogger
 [manual]: https://github.com/SIRLab/VSS-SDK/blob/master/MANUAL.md
@@ -182,6 +180,9 @@ Configurando nas Distros
 [boost]: http://www.boost.org/
 [glut]: https://www.opengl.org/resources/libraries/glut/
 [bullet]: http://bulletphysics.org/wordpress/
+[curl]: https://curl.haxx.se/
+[rustc]: https://www.rust-lang.org/en-US/
+[cargo]: https://crates.io/
 
 [gpl3]: http://www.gnu.org/licenses/gpl-3.0/
 [mit]: https://raw.githubusercontent.com/hyperium/hyper/master/LICENSE
@@ -189,25 +190,19 @@ Configurando nas Distros
 [badges]: http://shields.io/
 [travis]: https://travis-ci.org/SIRLab/VSS-SDK
 [youtube]: https://www.youtube.com/watch?v=2Yo8s7w7rTE
-[youtube1]: https://www.youtube.com/watch?v=kY607fLqeB0
-[youtube2]: https://www.youtube.com/watch?v=UQeVL_I5NIw
 
 [vision-travis]: https://travis-ci.org/SIRLab/VSS-Vision
 [simulator-travis]: https://travis-ci.org/SIRLab/VSS-Simulator
 [viewer-travis]: https://travis-ci.org/SIRLab/VSS-Viewer
-[sample-travis]: https://travis-ci.org/SIRLab/VSS-SampleStrategy
+[samplecpp-travis]: https://travis-ci.org/SIRLab/VSS-SampleCpp
+[samplerust-travis]: https://travis-ci.org/SIRLab/VSS-SampleRust
 [joystick-travis]: https://travis-ci.org/SIRLab/VSS-Joystick
 [gamelogger-travis]: https://travis-ci.org/SIRLab/VSS-GameLogger
 
 [vision-con]: https://github.com/SIRLab/VSS-Vision/graphs/contributors
 [simulator-con]: https://github.com/SIRLab/VSS-Simulator/graphs/contributors
 [viewer-con]: https://github.com/SIRLab/VSS-Viewer/graphs/contributors
-[sample-con]: https://github.com/SIRLab/VSS-SampleStrategy/graphs/contributors
+[samplecpp-con]: https://github.com/SIRLab/VSS-SampleCpp/graphs/contributors
+[samplerust-con]: https://github.com/SIRLab/VSS-SampleRust/graphs/contributors
 [joystick-con]: https://github.com/SIRLab/VSS-Joystick/graphs/contributors
 [gamelogger-con]: https://github.com/SIRLab/VSS-GameLogger/graphs/contributors
-
-[vision-youtube]: https://www.youtube.com/watch?v=LnWzAgE9Oqs
-[simulator-youtube]: https://www.youtube.com/watch?v=PZ5toHCb7KY
-[viewer-youtube]: https://www.youtube.com/watch?v=uyFlXV-0NnU
-[sample-youtube]: https://www.youtube.com/watch?v=qYsNPGvAuME
-[joystick-youtube]: https://www.youtube.com/watch?v=KJb4MIfrmH8
