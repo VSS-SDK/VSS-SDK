@@ -37,23 +37,21 @@ Visualizador de estados em 3D que incorpora os ambientes gerados pelos projetos 
 ![screenshot 3](https://raw.githubusercontent.com/SIRLab/VSS-Viewer/master/images/top.png)
 ![screenshot 4](https://raw.githubusercontent.com/SIRLab/VSS-Viewer/master/images/top2.png)
 
-### [VSS-SampleStrategy][samplecpp]:
+### [VSS-SampleCpp][samplecpp]:
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)][gpl3]
 [![Build Status](https://travis-ci.org/SIRLab/VSS-SampleCpp.svg?branch=master)][samplecpp-travis]
 [![badge](https://img.shields.io/github/contributors/SIRLab/VSS-SampleCpp.svg)][samplecpp-con]
 
 Demonstração em C++ de como utilizar nossa API e comunicar uma estratégia de jogo com o VSS-Vision e VSS-Simulator, além de como enviar comandos para robôs reais;
 
-![screenshot 5](https://raw.githubusercontent.com/SIRLab/VSS-SampleStrategy/master/images/top.png)
+![screenshot 5](https://raw.githubusercontent.com/SIRLab/VSS-SampleCpp/master/images/top.png)
 
-### [VSS-SampleStrategy][samplerust]:
+### [VSS-SampleRust][samplerust]:
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)][gpl3]
 [![Build Status](https://travis-ci.org/SIRLab/VSS-SampleRust.svg?branch=master)][samplerust-travis]
 [![badge](https://img.shields.io/github/contributors/SIRLab/VSS-SampleRust.svg)][samplerust-con]
 
 Demonstração em Rust de como utilizar nossa API e comunicar uma estratégia de jogo com o VSS-Vision e VSS-Simulator, além de como enviar comandos para robôs reais;
-
-![screenshot 5](https://raw.githubusercontent.com/SIRLab/VSS-SampleStrategy/master/images/top.png)
 
 ### [VSS-Joystick][joystick]:
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)][gpl3]
@@ -160,7 +158,7 @@ Configurando nas Distros
 [simulator]: https://github.com/SIRLab/VSS-Simulator
 [viewer]: https://github.com/SIRLab/VSS-Viewer
 [samplecpp]: https://github.com/SIRLab/VSS-SampleCpp
-[samplecpp]: https://github.com/SIRLab/VSS-SampleRust
+[samplerust]: https://github.com/SIRLab/VSS-SampleRust
 [joystick]: https://github.com/SIRLab/VSS-Joystick
 [gamelogger]: https://github.com/SIRLab/VSS-GameLogger
 [manual]: https://github.com/SIRLab/VSS-SDK/blob/master/MANUAL.md
